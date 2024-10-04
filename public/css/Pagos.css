@@ -1,0 +1,83 @@
+body {
+    font-family: sans-serif;
+    background-image: url('../images/wp3601088-ichigo-kurosaki-wallpapers.jpg');
+    background-size: cover; /* Hace que la imagen cubra toda la pantalla */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-attachment: fixed; /* Hace que la imagen de fondo se quede fija al hacer scroll */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: auto;
+
+
+
+}
+
+.container {
+    display: flex;
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+}
+
+.plan-card {
+    background-color: #242424;
+    padding: 30px;
+    border-radius: 10px;
+    margin: 0 15px;
+    flex: 1;
+}
+
+.plan-card h2 {
+    color: #00c853; /* Verde para Plus */
+    margin-bottom: 20px;
+}
+
+.plan-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.plan-card li {
+    margin-bottom: 10px;
+}
+
+.plan-card li::before {
+    content: "✓";
+    color: #00c853; /* Verde para checks */
+    margin-right: 10px;
+}
+
+.plan-button {
+    background-color: #00c853; /* Verde para botón */
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+
+.plan-button:hover {
+    background-color: #00b04a; /* Verde más oscuro al pasar el mouse */
+}
+
+.current-plan {
+    background-color: #333; /* Gris más oscuro para el plan actual */
+}
+
+.current-plan h2 {
+    color: white; /* Texto blanco para el plan actual */
+}
+
+.small-text {
+    font-size: 0.8rem;
+    color: #888;
+    margin-top: 20px;
+}

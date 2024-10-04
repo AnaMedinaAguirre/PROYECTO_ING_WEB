@@ -1,0 +1,111 @@
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-transform: capitalize;
+  transition: all .2s linear;
+}
+
+.gima {
+  max-width: 1200px;
+  margin: 0 auto;
+  margin: 0;
+  padding: 0;
+}
+
+.pagu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+  min-height: 100vh;
+  background-image: url("../images/fondu.avif");
+}
+
+.pagu form {
+  padding: 20px;
+  width: 700px;
+  background: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+}
+
+.pagu form img {
+  display: block;
+  /* Cambia a bloque para que se pueda centrar */
+  margin: 0 auto 20px;
+  /* Centra la imagen y añade espacio debajo */
+  max-width: 100%;
+  /* Asegúrate de que la imagen no exceda el ancho del formulario */
+  height: auto;
+  /* Mantiene la proporción de aspecto */
+}
+
+.pagu form .fila {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.pagu form .fila .colum {
+  flex: 1 1 250px;
+}
+
+.pagu form .fila .colum .title {
+  font-size: 20px;
+  color: #333;
+  padding-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.pagu form .fila .colum .inputBox {
+  margin: 15px 0;
+}
+
+.pagu form .fila .colum .inputBox span {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.pagu form .fila .colum .inputBox input {
+  width: 100%;
+  border: 1px solid #ccc;
+  padding: 10px 15px;
+  font-size: 15px;
+  text-transform: none;
+}
+
+.pagu form .fila .colum .inputBox input:focus {
+  border: 1px solid #000;
+}
+
+.pagu form .fila .colum .flex {
+  display: flex;
+  gap: 15px;
+}
+
+.pagu form .fila .colum .flex .inputBox {
+  margin-top: 5px;
+}
+
+.pagu form .fila .colum .inputBox img {
+  height: 34px;
+  margin-top: 5px;
+  filter: drop-shadow(0 0 1px #000);
+}
+
+.pagu form .submit-btn {
+  width: 100%;
+  padding: 12px;
+  font-size: 17px;
+  background: #6582e0;
+  color: #fff;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+.container form .submit-btn:hover {
+  background: #68c2fd;
+}

@@ -1,0 +1,200 @@
+/* GENERAL */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #1b1b1b; /* Fondo oscuro */
+    color: #f4f4f4; /* Texto claro */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* HEADER */
+header {
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco */
+    padding: 5px 10px; /* Barra más delgada */
+    display: flex; /* Para alinear logo y menú en línea */
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+header a img {
+    height: auto; /* Ajusta el tamaño del logo automáticamente */
+    max-width: 150px; /* Tamaño máximo del logo */
+    margin-right: auto; /* Mueve el logo a la izquierda */
+}
+
+header nav {
+    display: flex;
+    justify-content: flex-end; /* Menú a la derecha */
+    flex-grow: 1; /* Permite que el nav use el espacio restante */
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header nav li {
+    margin-left: 15px; /* Espacio entre los elementos del menú */
+}
+
+header nav a {
+    color: #333; /* Color oscuro para los enlaces */
+    text-decoration: none;
+    font-weight: 600; /* Negrita para los enlaces */
+    padding: 10px 15px; /* Espaciado alrededor del enlace */
+    border-radius: 5px; /* Bordes redondeados para los enlaces */
+    transition: background-color 0.3s ease; 
+}
+
+header nav a:hover {
+    background-color: rgba(34, 139, 34, 0.2); /* Fondo verde claro al pasar el mouse */
+}
+
+/* HERO SECTION */
+.hero {
+    background-image: url('../images/hero-videogames.jpg'); /* Cambia la imagen de fondo por una temática de videojuegos */
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 120px 20px;
+}
+
+.hero h2 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    color: #ffcc00; /* Amarillo para dar un toque llamativo */
+    text-shadow: 2px 2px 5px #000;
+}
+
+.hero p {
+    font-size: 1.5em;
+    color: #ffffff;
+}
+
+/* Botón en la sección de bienvenida */
+.hero .btn-hero {
+    background-color: #ff6600; /* Naranja brillante para un toque energético */
+    color: #fff;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.hero .btn-hero:hover {
+   background-color:#ff3300; 
+}
+
+/* COURSES SECTION */
+.courses {
+   padding:50px 20px;
+   background-color:#202020; /* Fondo oscuro para mayor contraste */
+}
+
+.courses h3 {
+   text-align:center;
+   margin-bottom:30px;
+   color:#ffcc00; 
+}
+
+.course-grid {
+   display:grid;
+   grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); /* Tarjetas responsivas */
+   grid-gap:20px;
+}
+
+.course {
+   background-color:#333; /* Fondo oscuro para las tarjetas de curso */
+   padding:20px;
+   border-radius:8px;
+   box-shadow:0 2px 5px rgba(0,0,0,.3); /* Sombra suave para las tarjetas */
+   color:#f4f4f4; 
+}
+
+.course h4 {
+   margin-bottom:10px; 
+   color:#ffcc00; /* Amarillo brillante */ 
+}
+
+.course p { 
+   color:#aaa; /* Texto gris claro */ 
+}
+
+/* Botón en la tarjeta del curso */
+.btn { 
+   background-color:#ff6600; 
+   color:white; 
+   padding:10px 15px; 
+   border:none; 
+   border-radius:5px; 
+   text-decoration:none; 
+   display:inline-block; 
+   margin-top:auto; /* Para alinear al final del contenedor del curso */ 
+}
+
+/* VIDEOS SECTION */
+.videos {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #2c2c2c; /* Fondo oscuro para la sección de videos */
+}
+
+.videos h3 {
+    color: #ffcc00;
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+}
+
+.video {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 56.25%; /* Aspect ratio 16:9 */
+    height: 0;
+}
+
+.video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+
+/* FOOTER */
+
+footer { 
+   background-color:#212529; /* Gris oscuro */ 
+   padding:20px 0; 
+   text-align:center; 
+}
+
+footer p { 
+   color:white; 
+   margin: 0 ;  
+}

@@ -53,6 +53,7 @@ document.getElementById('loginForm').addEventListener('submit', async function (
     console.log(data);
     if (data.message === 'Inicio de sesión exitoso') {
         alert('Login exitoso');
+        window.location.href = '/html/Pantalla_inicio.html';
     } else {
         alert('Login fallido: ' + data.message);
     }

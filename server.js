@@ -59,7 +59,7 @@ app.get('/auth/google',
 app.get('/auth/google/callback', 
     passport.authenticate('google', { failureRedirect: '/' }), // Si falla va de vuelta la inicio
     (req, res) => {
-        res.redirect('/');
+        res.redirect('/html/Pantalla_inicio.html');
     }
 );
 
@@ -74,6 +74,14 @@ app.use('/api/users', userRoutes);
 
 // Archivos estáticos (HTML, CSS, etc.) que están en la carpeta 'public'
 app.use(express.static('public'));
+
+app.get('/', (req, res) => {
+    res.sendFile(__dirname + '/public/html/index.html');
+});
+
+app.get('/html/Pantalla_inicio.html', (req, res) => {
+    res.sendFile(__dirname + '/public/html/Pantalla_inicio.html');
+});
 
 // Ruta de prueba para ver si el servidor funciona
 app.get('/api', (req, res) => {
