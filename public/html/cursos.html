@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parte de la Tienda</title>
+    <link rel="stylesheet" href="../css/styles-cursos.css">
+</head>
+<body>
+    <header>
+        <div class="container-cabecera">
+            <div class="titulos">
+                <h1>Todas las habilidades que necesitas en un único lugar</h1>
+                <p>Desde habilidades escensiales hasta temas tecnicos</p>
+            </div>
+            <div class="container-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+                </svg>
+            </div>
+        </div>
+        <nav class="Links-Navegacion">
+            <ul>
+                <li><a href="#">Desarrollo web</a></li>
+                <li><a href="#">JavaScript</a></li>
+                <li><a href="#">ReacJS</a></li>
+                <li><a href="#">Angular</a></li>
+                <li><a href="#">Java</a></li>
+            </ul>
+        </nav>
+        <!--Conteo de Productos-->
+        <div class="count-products">
+            <span id="contador-productos">0</span>
+        </div>
+        <div class="container-cart-products hidden-cart">
+            <div class="cart-product">
+                <div class="info-cart-product">
+                    <span class="cantidad-producto-carrito">1</span>
+                    <p class="titulo-producto-carrito">Ingeniería Web</p>
+                    <span class="precio-producto-carrito">$64.90</span>
+
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon-close">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                </svg>
+            </div>
+            <div class="cart-total">
+                <h3>Total:</h3>
+                <span class="total-pagar">$200</span>
+            </div>
+        </div>
+
+
+    </header>
+    <div class="container-items">
+        <div class="item">
+            <figure>
+                <img src="../images/Desarrollo_web.jpeg" alt="Desarrollo web">
+            </figure>
+            <div class="info-product">
+                <h3>Curso JavaScript - De cero a experto JavaScript!</h3>
+                <p>Global Mentoring Ing. Jhony Cerna</p>
+                <p>4,5 estrellas (10.673)</p>
+                <p class="price"> $64,90</p>
+                <button>Añadir al carrito</button>
+            </div>
+        </div>
+        <!-- Segunda imagen -->
+        <div class="item">
+            <figure>
+                <img src="../images/javaScript.jpeg" alt="JavaScript">
+            </figure>
+            <div class="info-product">
+                <h3>Curso JavaScript - De cero a experto JavaScript!</h3>
+                <p>Global Mentoring Ing. Jhony Cerna</p>
+                <p>4,5 estrellas (10.673)</p>
+                <p class="price"> $64,90</p>
+                <button>Añadir al carrito</button>
+            </div>
+        </div>
+        <!--Tercera imagen-->
+        <div class="item">
+            <figure>
+                <img src="../images/react.jpeg" alt="ReacJS">
+            </figure>
+            <div class="info-product">
+                <h3>Curso JavaScript - De cero a experto JavaScript!</h3>
+                <p>Global Mentoring Ing. Jhony Cerna</p>
+                <p>4,5 estrellas (10.673)</p>
+                <p class="price"> $64,90</p>
+                <button>Añadir al carrito</button>
+            </div>
+        </div>
+        <!--Cuarta imagen-->
+        <div class="item">
+            <figure>
+                <img src="../images/angular.jpeg" alt="Angular">
+            </figure>
+            <div class="info-product">
+                <h3>Curso JavaScript - De cero a experto JavaScript!</h3>
+                <p>Global Mentoring Ing. Jhony Cerna</p>
+                <p>4,5 estrellas (10.673)</p>
+                <p class="price"> $64,90</p>
+                <button>Añadir al carrito</button>
+            </div>
+        </div>
+        <!--Quinta imagen-->
+        <div class="item">
+            <figure>
+                <img src="../images/java.jpeg" alt="Java">
+            </figure>
+            <div class="info-product">
+                <h3>Curso JavaScript - De cero a experto JavaScript!</h3>
+                <p>Global Mentoring Ing. Jhony Cerna</p>
+                <p>4,5 estrellas (10.673)</p>
+                <p class="price"> $64,90</p>
+                <button>Añadir al carrito</button>
+            </div>
+        </div>
+    </div><!--final de los items-->
+    <script src="../js/carrito.js"></script>
+</body>
+</html>

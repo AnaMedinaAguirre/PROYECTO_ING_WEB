@@ -59,7 +59,7 @@ app.get('/auth/google',
 app.get('/auth/google/callback', 
     passport.authenticate('google', { failureRedirect: '/' }), // Si falla va de vuelta la inicio
     (req, res) => {
-        res.redirect('/html/Pantalla_inicio.html');
+        res.redirect('/html/principal.html');
     }
 );
 
@@ -79,8 +79,8 @@ app.get('/', (req, res) => {
     res.sendFile(__dirname + '/public/html/index.html');
 });
 
-app.get('/html/Pantalla_inicio.html', (req, res) => {
-    res.sendFile(__dirname + '/public/html/Pantalla_inicio.html');
+app.get('/html/principal.html', (req, res) => {
+    res.sendFile(__dirname + '/public/html/principal.html');
 });
 
 // Ruta de prueba para ver si el servidor funciona

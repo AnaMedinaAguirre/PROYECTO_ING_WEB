@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Solicitud de Beca</title>
+    <link rel="stylesheet" href="../css/beca.css"> <!-- Vincula el archivo CSS -->
+</head>
+<body>
+    <div class="container">
+        <h1>¡Solicita tu Beca GUIMARBOT ^^!</h1> <!-- Título principal -->
+        <p>Completa el siguiente formulario para aplicar a la beca. Asegúrate de haber completado los cursos y sube tus evidencias.</p> <!-- Instrucciones -->
+
+        <form action="#" method="post" enctype="multipart/form-data"> <!-- Formulario para la solicitud -->
+            <label for="nombre">Nombre Completo:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre completo" required> <!-- Campo de texto para nombre -->
+
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" placeholder="Escribe tu correo electrónico" required> <!-- Campo de texto para correo -->
+
+            <label for="motivo">Motivo de la Solicitud:</label>
+            <textarea id="motivo" name="motivo" rows="4" placeholder="Cuéntanos por qué necesitas esta beca" required></textarea> <!-- Área de texto para el motivo -->
+
+            <label for="cursos">Evidencia de haber completado los 2 cursos (PDF):</label>
+            <input type="file" id="cursos" name="cursos" accept=".pdf" required> <!-- Campo de archivo para cursos -->
+
+            <label for="notas">Sube tus notas:</label>
+            <input type="file" id="notas" name="notas" accept=".pdf" required> <!-- Campo de archivo para notas -->
+
+            <button type="submit">Enviar Solicitud</button> <!-- Botón para enviar el formulario -->
+        </form>
+    </div>
+</body>
+</html>

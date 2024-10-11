@@ -1,81 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GUIMARBOT</title>
-    <link rel="stylesheet" href="../css/pago.css">
+    <meta charset="UTF-8"> <!-- Establece la codificación de caracteres -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura el diseño responsivo -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet"> <!-- Importa íconos -->
+    <link rel="stylesheet" href="../css/pago.css"> <!-- Vincula el archivo CSS -->
+    <title>Adquirir Habilidades</title> <!-- Título de la página -->
+    <script>
+        // Guardar el título original
+        const originalTitle = document.title;
+
+        // Cambiar el título al cambiar de pestaña
+        document.addEventListener('visibilitychange', function() {
+            document.title = document.hidden ? "No te vayas😓" : originalTitle; // Cambia el título según el estado de la pestaña
+        });
+    </script>
 </head>
-
 <body>
-
-    <div class="pagu">
-
-        <form action="">
-            <img src="../images/revo.png" alt="gima">
-            <div class="fila">
-
-                <div class="colum">
-
-                    <h3 class="title">COMPRA</h3>
-
-                    <div class="inputBox">
-                        <span>Nombre :</span>
-                        <input type="text" placeholder="GUIMARBOT">
-                    </div>
-                    <div class="inputBox">
-                        <span>Correo :</span>
-                        <input type="email" placeholder="@guimarbot.com">
-                    </div>
-                    <div class="inputBox">
-                        <span>Dirreción :</span>
-                        <input type="text" placeholder="Calle">
-                    </div>
-                    <div class="inputBox">
-                        <span>Distrito:</span>
-                        <input type="text" placeholder="Los Olivos">
-                    </div>
-
+    <section class="payment-section"> <!-- Sección principal para el pago -->
+        <div class="container"> <!-- Contenedor para centrar el contenido -->
+            <div class="payment-box"> <!-- Caja de pago -->
+                <div class="payment-summary"> <!-- Resumen del pago -->
+                    <i class="ri-lightbulb-flash-line payment-icon"></i> <!-- Icono del resumen -->
+                    <h1>Adquirir Habilidades</h1> <!-- Título del resumen -->
+                    <p>Curso: <strong>S/. 20</strong></p> <!-- Precio del curso -->
+                    <p>Plan Duo (3 meses): <strong>S/. 200</strong></p> <!-- Precio del plan Duo -->
+                    <p class="total">Total: <strong>S/. 220</strong></p> <!-- Total a pagar -->
                 </div>
+                <form class="payment-form"> <!-- Formulario de pago -->
+                    <h2>Detalles de Pago</h2> <!-- Título del formulario -->
+                    <div class="payment-method"> <!-- Métodos de pago -->
+                        <input type="radio" id="visa" name="method" checked> <!-- Opción de pago con Visa -->
+                        <label for="visa"><img src="../images/visa.png" alt="Visa"></label> <!-- Icono de Visa -->
 
-                <div class="colum">
+                        <input type="radio" id="mastercard" name="method"> <!-- Opción de pago con Mastercard -->
+                        <label for="mastercard"><img src="../images/mastercard.png" alt="Mastercard"></label> <!-- Icono de Mastercard -->
 
-                    <h3 class="title">Pago</h3>
-
-                    <div class="inputBox">
-                        <span>Tarjeta Aceptadas:</span>
-                        <img src="../images/card_img.png" alt="">
-                    </div>
-                    <div class="inputBox">
-                        <span>Número de Tarjeta de Crédito:</span>
-                        <input type="number" placeholder="1111-2222-3333-4444">
-                    </div>
-                    <div class="inputBox">
-                        <span>Mes exp:</span>
-                        <input type="text" placeholder="january">
+                        <input type="radio" id="paypal" name="method"> <!-- Opción de pago con PayPal -->
+                        <label for="paypal"><img src="../images/paypal.png" alt="Paypal"></label> <!-- Icono de PayPal -->
                     </div>
 
-                    <div class="flex">
-                        <div class="inputBox">
-                            <span>Año exp :</span>
-                            <input type="number" placeholder="2022">
-                        </div>
-                        <div class="inputBox">
-                            <span>CVV :</span>
-                            <input type="text" placeholder="1234">
-                        </div>
+                    <div class="input-group"> <!-- Grupo de entrada para correo -->
+                        <input type="email" id="email" placeholder="Correo electrónico" required> <!-- Campo para el correo -->
                     </div>
 
-                </div>
+                    <div class="input-group"> <!-- Grupo de entrada para número de tarjeta -->
+                        <input type="text" id="card-number" placeholder="Número de tarjeta" required> <!-- Campo para el número de tarjeta -->
+                    </div>
 
+                    <div class="input-group-half"> <!-- Grupo de entrada para fecha de expiración y CVV -->
+                        <input type="text" id="expiry-date" placeholder="Fecha de expiración" required> <!-- Campo para fecha de expiración -->
+                        <input type="text" id="cvv" placeholder="CVV" required> <!-- Campo para CVV -->
+                    </div>
+
+                    <button type="submit" class="btn-submit"> <!-- Botón de envío -->
+                        <i class="ri-wallet-line"></i> Pagar Ahora <!-- Texto del botón -->
+                    </button>
+                </form>
             </div>
-
-            <input type="submit" value="CONFIRMAR COMPRA" class="submit-btn">
-
-        </form>
-
-    </div>
+        </div>
+    </section>
 </body>
-
 </html>

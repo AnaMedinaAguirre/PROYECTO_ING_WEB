@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en" class="light-style layout-menu-fixed" dir="ltr" data-theme="theme-default" data-assets-path="../assets/"
+    data-template="vertical-menu-template-free">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+
+    <title>Configuración de Cuenta</title>
+
+    <meta name="description" content="" />
+
+
+    <link rel="stylesheet" href="../css/style-clientes.css">
+    <link rel="stylesheet" href="../css/style-dash.css">
+
+</head>
+
+<body>
+
+    <!-- =============== Navigation ================ -->
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="dash.html">
+                        <span class="icon">
+                            <ion-icon name="logo-ionitron"></ion-icon>
+                        </span>
+                        <span class="title">GuímarBot</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="dash.html">
+                        <span class="icon">
+                            <ion-icon name="home-outline"></ion-icon>
+                        </span>
+                        <span class="title">Inicio</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="clientes.html">
+                        <span class="icon">
+                            <ion-icon name="people-outline"></ion-icon>
+                        </span>
+                        <span class="title">Clientes</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="roles.html">
+                        <span class="icon">
+                            <ion-icon name="person-add-outline"></ion-icon>
+                        </span>
+                        <span class="title">Roles y Usuarios</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="terminal-outline"></ion-icon>
+                        </span>
+                        <span class="title">Cursos</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="videocam-outline"></ion-icon>
+                        </span>
+                        <span class="title">Videos</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="bar-chart-outline"></ion-icon>
+                        </span>
+                        <span class="title">Estadísticas</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="rocket-outline"></ion-icon>
+                        </span>
+                        <span class="title">Becas</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="configuracion.html">
+                        <span class="icon">
+                            <ion-icon name="settings-outline"></ion-icon>
+                        </span>
+                        <span class="title">Configuración</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="principal.html">
+                        <span class="icon">
+                            <ion-icon name="log-out-outline"></ion-icon>
+                        </span>
+                        <span class="title">Sign Out</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- ========================= Main ==================== -->
+        <div class="main">
+            <div class="topbar">
+                <div class="toggle">
+                    <ion-icon name="menu-outline"></ion-icon>
+                </div>
+
+                <div class="search">
+                    <label>
+                        <input type="text" placeholder="Search here">
+                        <ion-icon name="search-outline"></ion-icon>
+                    </label>
+                </div>
+
+
+
+                <div class="user">
+                    <img src="../images/Ingeniero-de-Sistemas-de-la-UCV-es-gerente-general-750.jpg" alt="">
+                </div>
+            </div>
+
+
+            <!-- ======================= Content ================== -->
+            <div class="container-xxl flex-grow-1 container-p-y">
+                <!-- customers List Table -->
+                <div class="card">
+
+                    <div class="card-datatable table-responsive">
+                        <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper dt-bootstrap5 no-footer">
+                            <div
+                                class="card-header d-flex flex-wrap flex-md-row flex-column align-items-start align-items-sm-center py-0">
+                                <div class="d-flex align-items-center me-5">
+                                    <div id="DataTables_Table_0_filter" class="dataTables_filter ms-n3 mb-0 mb-md-6">
+                                        <label><input type="search" class="form-control" placeholder="Search Order"
+                                                aria-controls="DataTables_Table_0"></label>
+                                    </div>
+                                </div>
+                                <div
+                                    class="dt-action-buttons text-xl-end text-lg-start text-md-end text-start d-flex align-items-center justify-content-md-end flex-wrap flex-sm-nowrap mb-6 mb-sm-0 pt-0">
+                                    <div class="dataTables_length ms-n2 me-2" id="DataTables_Table_0_length">
+                                        <label><select name="DataTables_Table_0_length"
+                                                aria-controls="DataTables_Table_0" class="form-select">
+                                                <option value="10">10</option>
+                                                <option value="25">25</option>
+                                                <option value="50">50</option>
+                                                <option value="100">100</option>
+                                            </select></label>
+                                    </div>
+                                    <div class="dt-buttons btn-group flex-wrap d-flex">
+                                        <div class="btn-group"><button
+                                                class="btn btn-secondary buttons-collection dropdown-toggle btn-label-secondary me-4"
+                                                tabindex="0" aria-controls="DataTables_Table_0" type="button"
+                                                aria-haspopup="dialog" aria-expanded="false"><span><ion-icon
+                                                        name="download-outline"></ion-icon>Exportar</span></button></div>
+                                        <button class="btn btn-secondary add-new btn-primary" tabindex="0"
+                                            aria-controls="DataTables_Table_0" type="button" data-bs-toggle="offcanvas"
+                                            data-bs-target="#offcanvasEcommerceCustomerAdd"><span>
+                                                <ion-icon name="add-outline"></ion-icon><span
+                                                    class="d-none d-sm-inline-block">Agregar Cliente</span></span></button>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <table
+                                class="datatables-customers table border-top dataTable no-footer dtr-column collapsed"
+                                id="DataTables_Table_0" aria-describedby="DataTables_Table_0_info"
+                                style="width: 1001px;">
+                                <thead>
+                                    <tr>
+                                        <th class="control sorting_disabled" rowspan="1" colspan="1" style="width: 0px;"
+                                            aria-label=""></th>
+                                        <th class="sorting_disabled dt-checkboxes-cell dt-checkboxes-select-all"
+                                            rowspan="1" colspan="1" style="width: 18px;" data-col="1" aria-label="">
+                                            <input type="checkbox" class="form-check-input">
+                                        </th>
+                                        <th class="sorting sorting_desc" tabindex="0" aria-controls="DataTables_Table_0"
+                                            rowspan="1" colspan="1" style="width: 248px;"
+                                            aria-label="Customer: activate to sort column ascending"
+                                            aria-sort="descending">Cliente</th>
+
+
+                                        <th class="text-nowrap sorting" tabindex="0" aria-controls="DataTables_Table_0"
+                                            rowspan="1" colspan="1" style="width: 112px;"
+                                            aria-label="Customer Id: activate to sort column ascending">Id Cliente</th>
+
+
+                                        <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1"
+                                            colspan="1" style="width: 100px;"
+                                            aria-label="Country: activate to sort column ascending">País</th>
+
+
+                                        <th class="text-nowrap sorting dtr-hidden" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1"
+                                            colspan="1" style="width: 100px;"
+                                            aria-label="Total Spent: activate to sort column ascending">Total Spent</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr class="odd">
+                                        <td class="control" tabindex="0"></td>
+                                        <td class="  dt-checkboxes-cell"><input type="checkbox"
+                                                class="dt-checkboxes form-check-input"></td>
+                                        <td class="sorting_1">
+                                            <div class="d-flex justify-content-start align-items-center customer-name">
+                                                <div class="avatar-wrapper">
+                                                    <div class="avatar avatar-sm me-3"><img
+                                                            src="../images/customer01.jpg" alt="Avatar"
+                                                            class="rounded-circle"></div>
+                                                </div>
+                                                <div class="d-flex flex-column"><a href="" class="text-heading"><span
+                                                            class="fw-medium">Zeke
+                                                            Arton</span></a><small>zarton8@gmail.com</small></div>
+                                            </div>
+                                        </td>
+                                        <td class=""><span class="text-heading">#895280</span></td>
+                                        <td class="">
+                                            <div
+                                                class="d-flex justify-content-start align-items-center customer-country">
+                                                <div><i class="fis fi fi-ua rounded-circle me-2 fs-4"></i></div>
+                                                <div><span>Colombia</span></div>
+                                            </div>
+                                        </td>
+                                        <td class=""><span>S/539.00</span></td>
+                                    </tr>
+                                    <tr class="even">
+                                        <td class="control" tabindex="0"></td>
+                                        <td class="  dt-checkboxes-cell"><input type="checkbox"
+                                                class="dt-checkboxes form-check-input"></td>
+                                        <td class="sorting_1">
+                                            <div class="d-flex justify-content-start align-items-center customer-name">
+                                                <div class="avatar-wrapper">
+                                                    <div class="avatar avatar-sm me-3"><img
+                                                            src="../images/customer02.jpg" alt="Avatar"
+                                                            class="rounded-circle"></div>
+                                                </div>
+                                                <div class="d-flex flex-column"><a href="" class="text-heading"><span
+                                                            class="fw-medium">Zed
+                                                            Rawe</span></a><small>zrawe1t@gmail.com</small></div>
+                                            </div>
+                                        </td>
+                                        <td class=""><span class="text-heading">#343593</span></td>
+                                        <td class="">
+                                            <div
+                                                class="d-flex justify-content-start align-items-center customer-country">
+                                                <div><i class="fis fi fi-ly rounded-circle me-2 fs-4"></i></div>
+                                                <div><span>España</span></div>
+                                            </div>
+                                        </td>
+                                        <td class=""><span>S/473.00</span></td>
+                                    </tr>
+                                    <tr class="odd">
+                                        <td class="control" tabindex="0"></td>
+                                        <td class="  dt-checkboxes-cell"><input type="checkbox"
+                                                class="dt-checkboxes form-check-input"></td>
+                                        <td class="sorting_1">
+                                            <div class="d-flex justify-content-start align-items-center customer-name">
+                                                <div class="avatar-wrapper">
+                                                    <div class="avatar avatar-sm me-3"><span
+                                                            class="avatar-initial rounded-circle bg-label-dark">YL</span>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex flex-column"><a href="" class="text-heading"><span
+                                                            class="fw-medium">Yank
+                                                            Luddy</span></a><small>yluddy22@gmail.com</small></div>
+                                            </div>
+                                        </td>
+                                        <td class=""><span class="text-heading">#586615</span></td>
+                                        <td class="">
+                                            <div
+                                                class="d-flex justify-content-start align-items-center customer-country">
+                                                <div><i class="fis fi fi-pt rounded-circle me-2 fs-4"></i></div>
+                                                <div><span>Perú</span></div>
+                                            </div>
+                                        </td>
+                                        <td class=""><span>S/462.00</span></td>
+                                    </tr>
+                                    <tr class="even">
+                                        <td class="control" tabindex="0"></td>
+                                        <td class="  dt-checkboxes-cell"><input type="checkbox"
+                                                class="dt-checkboxes form-check-input"></td>
+                                        <td class="sorting_1">
+                                            <div class="d-flex justify-content-start align-items-center customer-name">
+                                                <div class="avatar-wrapper">
+                                                    <div class="avatar avatar-sm me-3"><span
+                                                            class="avatar-initial rounded-circle bg-label-dark">VT</span>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex flex-column"><a href="" class="text-heading"><span
+                                                            class="fw-medium">Valenka
+                                                            Turbill</span></a><small>vturbill2h@gmail.com</small>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class=""><span class="text-heading">#179914</span></td>
+                                        <td class="">
+                                            <div
+                                                class="d-flex justify-content-start align-items-center customer-country">
+                                                <div><i class="fis fi fi-tm rounded-circle me-2 fs-4"></i></div>
+                                                <div><span>Venezuela</span></div>
+                                            </div>
+                                        </td>
+                                        <td class=""><span>S/550.00</span></td>
+                                    </tr>
+                                    <tr class="odd">
+                                        <td class="control" tabindex="0"></td>
+                                        <td class="  dt-checkboxes-cell"><input type="checkbox"
+                                                class="dt-checkboxes form-check-input"></td>
+                                        <td class="sorting_1">
+                                            <div class="d-flex justify-content-start align-items-center customer-name">
+                                                <div class="avatar-wrapper">
+                                                    <div class="avatar avatar-sm me-3"><span
+                                                            class="avatar-initial rounded-circle bg-label-warning">TV</span>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex flex-column"><a href="" class="text-heading"><span
+                                                            class="fw-medium">Thomasine
+                                                            Vasentsov</span></a><small>tvasentsov1u@gmail.com</small>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class=""><span class="text-heading">#988015</span></td>
+                                        <td class="">
+                                            <div
+                                                class="d-flex justify-content-start align-items-center customer-country">
+                                                <div><i class="fis fi fi-ar rounded-circle me-2 fs-4"></i></div>
+                                                <div><span>Argentina</span></div>
+                                            </div>
+                                        </td>
+                                        <td class=""><span>S/752.00</span></td>
+                                    </tr>
+                                    <tr class="even">
+                                        <td class="control" tabindex="0"></td>
+                                        <td class="  dt-checkboxes-cell"><input type="checkbox"
+                                                class="dt-checkboxes form-check-input"></td>
+                                        <td class="sorting_1">
+                                            <div class="d-flex justify-content-start align-items-center customer-name">
+                                                <div class="avatar-wrapper">
+                                                    <div class="avatar avatar-sm me-3"><img
+                                                            src="../images/Ingeniero-de-Sistemas-de-la-UCV-es-gerente-general-750.jpg"
+                                                            alt="Avatar" class="rounded-circle"></div>
+                                                </div>
+                                                <div class="d-flex flex-column"><a href="" class="text-heading"><span
+                                                            class="fw-medium">Tome
+                                                            Joliffe</span></a><small>tjoliffe27@gmail.com</small></div>
+                                            </div>
+                                        </td>
+                                        <td class=""><span class="text-heading">#356230</span></td>
+                                        <td class="">
+                                            <div
+                                                class="d-flex justify-content-start align-items-center customer-country">
+                                                <div><i class="fis fi fi-mx rounded-circle me-2 fs-4"></i></div>
+                                                <div><span>Mexico</span></div>
+                                            </div>
+                                        </td>
+                                        <td class=""><span>S/515.00</span></td>
+                                    </tr>
+                                    <tr class="odd">
+                                        <td class="control" tabindex="0"></td>
+                                        <td class="  dt-checkboxes-cell"><input type="checkbox"
+                                                class="dt-checkboxes form-check-input"></td>
+                                        <td class="sorting_1">
+                                            <div class="d-flex justify-content-start align-items-center customer-name">
+                                                <div class="avatar-wrapper">
+                                                    <div class="avatar avatar-sm me-3"><span
+                                                            class="avatar-initial rounded-circle bg-label-dark">TD</span>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex flex-column"><a href="" class="text-heading"><span
+                                                            class="fw-medium">Taryn
+                                                            Ducker</span></a><small>tduckerr@gmail.com</small></div>
+                                            </div>
+                                        </td>
+                                        <td class=""><span class="text-heading">#486325</span></td>
+                                        <td class="">
+                                            <div
+                                                class="d-flex justify-content-start align-items-center customer-country">
+                                                <div><i class="fis fi fi-bt rounded-circle me-2 fs-4"></i></div>
+                                                <div><span>Chile</span></div>
+                                            </div>
+                                        </td>
+                                        <td class=""><span>S/535.00</span></td>
+                                    </tr>
+                                    <tr class="even">
+                                        <td class="control" tabindex="0"></td>
+                                        <td class="  dt-checkboxes-cell"><input type="checkbox"
+                                                class="dt-checkboxes form-check-input"></td>
+                                        <td class="sorting_1">
+                                            <div class="d-flex justify-content-start align-items-center customer-name">
+                                                <div class="avatar-wrapper">
+                                                    <div class="avatar avatar-sm me-3"><span
+                                                            class="avatar-initial rounded-circle bg-label-dark">TB</span>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex flex-column"><a href="" class="text-heading"><span
+                                                            class="fw-medium">Tobin
+                                                            Bassick</span></a><small>tbassick2e@gmail.com</small>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class=""><span class="text-heading">#165827</span></td>
+                                        <td class="">
+                                            <div
+                                                class="d-flex justify-content-start align-items-center customer-country">
+                                                <div><i class="fis fi fi-jo rounded-circle me-2 fs-4"></i></div>
+                                                <div><span>Jordan</span></div>
+                                            </div>
+                                        </td>
+                                        <td class=""><span>S/527.00</span></td>
+                                    </tr>
+                                    <tr class="odd">
+                                        <td class="control" tabindex="0"></td>
+                                        <td class="  dt-checkboxes-cell"><input type="checkbox"
+                                                class="dt-checkboxes form-check-input"></td>
+                                        <td class="sorting_1">
+                                            <div class="d-flex justify-content-start align-items-center customer-name">
+                                                <div class="avatar-wrapper">
+                                                    <div class="avatar avatar-sm me-3"><img
+                                                            src="../images/customer01.jpg" alt="Avatar"
+                                                            class="rounded-circle"></div>
+                                                </div>
+                                                <div class="d-flex flex-column"><a href="" class="text-heading"><span
+                                                            class="fw-medium">Tanner
+                                                            Irdale</span></a><small>tirdale1b@gmail.com</small></div>
+                                            </div>
+                                        </td>
+                                        <td class=""><span class="text-heading">#855725</span></td>
+                                        <td class="">
+                                            <div
+                                                class="d-flex justify-content-start align-items-center customer-country">
+                                                <div><i class="fis fi fi-cn rounded-circle me-2 fs-4"></i></div>
+                                                <div><span>Ecuador</span></div>
+                                            </div>
+                                        </td>
+                                        <td class=""><span>S/438.00</span></td>
+                                    </tr>
+                                    <tr class="even">
+                                        <td class="control" tabindex="0"></td>
+                                        <td class="  dt-checkboxes-cell"><input type="checkbox"
+                                                class="dt-checkboxes form-check-input"></td>
+                                        <td class="sorting_1">
+                                            <div class="d-flex justify-content-start align-items-center customer-name">
+                                                <div class="avatar-wrapper">
+                                                    <div class="avatar avatar-sm me-3"><img
+                                                            src="../images/customer02.jpg" alt="Avatar"
+                                                            class="rounded-circle"></div>
+                                                </div>
+                                                <div class="d-flex flex-column"><a href="" class="text-heading"><span
+                                                            class="fw-medium">Tadeo
+                                                            Blasio</span></a><small>tblasio1w@gmail.com</small></div>
+                                            </div>
+                                        </td>
+                                        <td class=""><span class="text-heading">#208862</span></td>
+                                        <td class="">
+                                            <div
+                                                class="d-flex justify-content-start align-items-center customer-country">
+                                                <div><i class="fis fi fi-cn rounded-circle me-2 fs-4"></i></div>
+                                                <div><span>Perú</span></div>
+                                            </div>
+                                        </td>
+                                        <td class=""><span>S/751.00</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+
+                            <div class="row">
+                                <div class="col-sm-12 col-md-6">
+                                    <div class="dataTables_info" id="DataTables_Table_0_info" role="status"
+                                        aria-live="polite">Mostrando 1 a 10 de 100 entradas</div>
+                                </div>
+                                <div class="col-sm-12 col-md-6">
+                                    <div class="dataTables_paginate paging_simple_numbers"
+                                        id="DataTables_Table_0_paginate">
+                                        <ul class="pagination">
+                                            <li class="paginate_button page-item previous disabled"
+                                                id="DataTables_Table_0_previous"><a aria-controls="DataTables_Table_0"
+                                                    aria-disabled="true" role="link" data-dt-idx="previous"
+                                                    tabindex="-1" class="page-link"><i
+                                                        class="bx bx-chevron-left bx-18px"></i></a></li>
+                                            <li class="paginate_button page-item active"><a href="#"
+                                                    aria-controls="DataTables_Table_0" role="link" aria-current="page"
+                                                    data-dt-idx="0" tabindex="0" class="page-link">1</a></li>
+                                            <li class="paginate_button page-item "><a href="#"
+                                                    aria-controls="DataTables_Table_0" role="link" data-dt-idx="1"
+                                                    tabindex="0" class="page-link">2</a></li>
+                                            <li class="paginate_button page-item "><a href="#"
+                                                    aria-controls="DataTables_Table_0" role="link" data-dt-idx="2"
+                                                    tabindex="0" class="page-link">3</a></li>
+                                            <li class="paginate_button page-item "><a href="#"
+                                                    aria-controls="DataTables_Table_0" role="link" data-dt-idx="3"
+                                                    tabindex="0" class="page-link">4</a></li>
+                                            <li class="paginate_button page-item "><a href="#"
+                                                    aria-controls="DataTables_Table_0" role="link" data-dt-idx="4"
+                                                    tabindex="0" class="page-link">5</a></li>
+                                            <li class="paginate_button page-item disabled"
+                                                id="DataTables_Table_0_ellipsis"><a aria-controls="DataTables_Table_0"
+                                                    aria-disabled="true" role="link" data-dt-idx="ellipsis"
+                                                    tabindex="-1" class="page-link">…</a></li>
+                                            <li class="paginate_button page-item "><a href="#"
+                                                    aria-controls="DataTables_Table_0" role="link" data-dt-idx="9"
+                                                    tabindex="0" class="page-link">10</a></li>
+                                            <li class="paginate_button page-item next" id="DataTables_Table_0_next"><a
+                                                    href="#" aria-controls="DataTables_Table_0" role="link"
+                                                    data-dt-idx="next" tabindex="0" class="page-link"><i
+                                                        class="bx bx-chevron-right bx-18px"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div style="width: 1%;"></div>
+                        </div>
+                    </div>
+
+                    <!-- Offcanvas to add new customer -->
+                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasEcommerceCustomerAdd"
+                        aria-labelledby="offcanvasEcommerceCustomerAddLabel">
+                        <div class="offcanvas-header">
+                            <h5 id="offcanvasEcommerceCustomerAddLabel" class="offcanvas-title">Agregar Cliente</h5>
+                            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                                aria-label="Close"><ion-icon name="close-outline"></ion-icon></button>
+                        </div>
+                        <div class="offcanvas-body border-top mx-0 flex-grow-0">
+                            <form class="ecommerce-customer-add pt-0 fv-plugins-bootstrap5 fv-plugins-framework"
+                                id="eCommerceCustomerAddForm" onsubmit="return false" novalidate="novalidate">
+                                <div class="ecommerce-customer-add-basic mb-4">
+                                    <h6 class="mb-6">Información Básica</h6>
+                                    <div class="mb-6 fv-plugins-icon-container">
+                                        <label class="form-label" for="ecommerce-customer-add-name">Nombre*</label>
+                                        <input type="text" class="form-control" id="ecommerce-customer-add-name"
+                                            placeholder="Juanito" name="customerName" aria-label="Juanito">
+                                        <div
+                                            class="fv-plugins-message-container fv-plugins-message-container--enabled invalid-feedback">
+                                        </div>
+                                    </div>
+                                    <div class="mb-6 fv-plugins-icon-container">
+                                        <label class="form-label" for="ecommerce-customer-add-email">Gmail*</label>
+                                        <input type="text" id="ecommerce-customer-add-email" class="form-control"
+                                            placeholder="juanito.na@example.com" aria-label="juanito.na@example.com"
+                                            name="customerEmail">
+                                        <div
+                                            class="fv-plugins-message-container fv-plugins-message-container--enabled invalid-feedback">
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <label class="form-label" for="ecommerce-customer-add-contact">Celular</label>
+                                        <input type="text" id="ecommerce-customer-add-contact"
+                                            class="form-control phone-mask" placeholder="+(51) 918764329"
+                                            aria-label="+(51) 918764329" name="customerContact">
+                                    </div>
+                                </div>
+
+                                <div class="ecommerce-customer-add-shiping mb-6 pt-4">
+                                    <h6 class="mb-6">Información Adicional</h6>
+                                    <div class="mb-6">
+                                        <label class="form-label" for="ecommerce-customer-add-address">Dirección 1</label>
+                                        <input type="text" id="ecommerce-customer-add-address" class="form-control"
+                                            placeholder="Av. Perú" aria-label="45 Roker Terrace"
+                                            name="customerAddress1">
+                                    </div>
+                                    <div class="mb-6">
+                                        <label class="form-label" for="ecommerce-customer-add-address-2">Dirección 2</label>
+                                        <input type="text" id="ecommerce-customer-add-address-2" class="form-control"
+                                            aria-label="address2" name="customerAddress2">
+                                    </div>
+                                    <div class="mb-6">
+                                        <label class="form-label" for="ecommerce-customer-add-town">Ciudad</label>
+                                        <input type="text" id="ecommerce-customer-add-town" class="form-control"
+                                            placeholder="Lima" aria-label="Lima" name="customerTown">
+                                    </div>
+                                    <div class="col-12 mb-6">
+                                        <label class="form-label" for="ecommerce-customer-add-state">Estado /
+                                            Provincia</label>
+                                        <input type="text" id="ecommerce-customer-add-state" class="form-control"
+                                            placeholder="Ventanilla" aria-label="Ventanilla" name="customerState">
+                                    </div>
+                                    <div>
+                                        <label class="form-label" for="ecommerce-customer-add-country">País</label>
+                                        <div class="position-relative"><select id="ecommerce-customer-add-country"
+                                                class="select2 form-select select2-hidden-accessible"
+                                                data-select2-id="ecommerce-customer-add-country" tabindex="-1"
+                                                aria-hidden="true">
+                                                <option value="" data-select2-id="2">Select</option>
+                                                <option value="Chile">Chile</option>
+                                                <option value="Peru">Perú</option>
+                                                <option value="Brasil">Brasil</option>
+                                                <option value="Canada">Canada</option>
+                                                <option value="Venezuela">Venezuela</option>
+                                                <option value="Bolivia">Bolivia</option>
+                                                <option value="Ecuador">Ecuador</option>
+                                                <option value="Argentina">Argentina</option>
+                                                <option value="Colombia">Colombia</option>
+                                                <option value="El Salvador">El Salvador</option>
+                                                <option value="Costa Rica">Costa Rica</option>
+                                                <option value="Estados Unidos">Estados Unidos</option>
+                                            </select><span class="select2 select2-container select2-container--default"
+                                                dir="ltr" data-select2-id="1" style="width: 337px;"><span
+                                                    class="selection"><span
+                                                        class="select2-selection select2-selection--single"
+                                                        role="combobox" aria-haspopup="true" aria-expanded="false"
+                                                        tabindex="0" aria-disabled="false"
+                                                        aria-labelledby="select2-ecommerce-customer-add-country-container"><span
+                                                            class="select2-selection__rendered"
+                                                            id="select2-ecommerce-customer-add-country-container"
+                                                            role="textbox" aria-readonly="true"></span></span></span><span
+                                                    class="dropdown-wrapper" aria-hidden="true"></span></span></div>
+                                    </div>
+
+                                </div>
+
+                                <div>
+                                    <button type="submit" class="btn btn-primary me-sm-3 data-submit">Agregar</button>
+                                    <button type="reset" class="btn btn-label-danger"
+                                        data-bs-dismiss="offcanvas">Descartar</button>
+                                </div>
+                                <input type="hidden">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ======================= Content ================== -->
+
+        </div>
+
+    </div>
+
+    <!-- =========== Scripts =========  -->
+    <script src="../js/main.js"></script>
+    <script src="../js/script-configuracion.js"></script>
+
+    <!-- =========== Charts JS =========  -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../js/chartsJS.js"></script>
+
+    <!-- ====== ionicons ======= -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

@@ -1,111 +1,123 @@
-* {
-  font-family: 'Poppins', sans-serif;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  outline: none;
-  border: none;
-  text-transform: capitalize;
-  transition: all .2s linear;
+
+body {
+    font-family: 'Inter', sans-serif; /* Establece la fuente principal */
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef); /* Degradado de fondo */
+    background-image: url('../images/fond.avif'); /* Imagen de fondo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-position: center; /* Centra la imagen de fondo */
+    background-size: cover; /* Asegura que la imagen cubra toda la pantalla */
+    margin: 0; /* Elimina márgenes por defecto */
+    display: flex; /* Utiliza flexbox para centrar el contenido */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    height: 100vh; /* Altura completa de la ventana */
 }
 
-.gima {
-  max-width: 1200px;
-  margin: 0 auto;
-  margin: 0;
-  padding: 0;
+.container {
+    max-width: 400px; /* Ancho máximo del contenedor */
+    padding: 20px; /* Espaciado interno */
 }
 
-.pagu {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 25px;
-  min-height: 100vh;
-  background-image: url("../images/fondu.avif");
+.payment-box {
+    background-color: rgba(255, 255, 255, 0.85); /* Fondo semi-transparente */
+    padding: 24px; /* Espaciado interno */
+    border-radius: 12px; /* Bordes redondeados */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    backdrop-filter: blur(10px); /* Efecto de desenfoque de fondo */
 }
 
-.pagu form {
-  padding: 20px;
-  width: 700px;
-  background: #fff;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+.payment-summary {
+    text-align: center; /* Alineación centrada */
+    margin-bottom: 24px; /* Espacio inferior */
 }
 
-.pagu form img {
-  display: block;
-  /* Cambia a bloque para que se pueda centrar */
-  margin: 0 auto 20px;
-  /* Centra la imagen y añade espacio debajo */
-  max-width: 100%;
-  /* Asegúrate de que la imagen no exceda el ancho del formulario */
-  height: auto;
-  /* Mantiene la proporción de aspecto */
+.payment-summary h1 {
+    font-size: 1.75rem; /* Tamaño de fuente del título */
+    color: #1E90FF; /* Color del título */
+    margin-bottom: 8px; /* Espacio inferior */
 }
 
-.pagu form .fila {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
+.payment-summary p {
+    margin-bottom: 4px; /* Espacio inferior */
+    color: #000080; /* Color del texto */
 }
 
-.pagu form .fila .colum {
-  flex: 1 1 250px;
+.total {
+    font-weight: bold; /* Texto en negrita */
+    color: #00BFFF; /* Color del total */
+    margin-top: 12px; /* Espacio superior */
 }
 
-.pagu form .fila .colum .title {
-  font-size: 20px;
-  color: #333;
-  padding-bottom: 5px;
-  text-transform: uppercase;
+.payment-form h2 {
+    font-size: 1.25rem; /* Tamaño de fuente del subtítulo */
+    margin-bottom: 16px; /* Espacio inferior */
+    text-align: center; /* Alineación centrada */
+    color: #1E90FF; /* Color del subtítulo */
 }
 
-.pagu form .fila .colum .inputBox {
-  margin: 15px 0;
+.payment-method {
+    display: flex; /* Utiliza flexbox para los métodos de pago */
+    justify-content: center; /* Centra los métodos horizontalmente */
+    gap: 14px; /* Espacio entre elementos */
+    margin-bottom: 20px; /* Espacio inferior */
 }
 
-.pagu form .fila .colum .inputBox span {
-  margin-bottom: 10px;
-  display: block;
+.payment-method input {
+    display: none; /* Oculta los botones de radio */
 }
 
-.pagu form .fila .colum .inputBox input {
-  width: 100%;
-  border: 1px solid #ccc;
-  padding: 10px 15px;
-  font-size: 15px;
-  text-transform: none;
+.payment-method label {
+    display: flex; /* Flexbox para centrar el icono */
+    align-items: center; /* Alineación vertical */
+    justify-content: center; /* Alineación horizontal */
+    width: 90px; /* Ancho del label */
+    height: 60px; /* Altura del label */
+    border: 4px solid #00BFFF; /* Borde inicial */
+    border-radius: 10px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    transition: border-color 0.3s ease; /* Efecto de transición para el borde */
 }
 
-.pagu form .fila .colum .inputBox input:focus {
-  border: 1px solid #000;
+.payment-method input:checked + label {
+    border-color: #1E90FF; /* Cambia el color del borde si está seleccionado */
 }
 
-.pagu form .fila .colum .flex {
-  display: flex;
-  gap: 15px;
+.input-group, .input-group-half {
+    margin-bottom: 16px; /* Espacio inferior */
 }
 
-.pagu form .fila .colum .flex .inputBox {
-  margin-top: 5px;
+.input-group-half {
+    display: flex; /* Flexbox para los campos de entrada */
+    gap: 12px; /* Espacio entre campos */
 }
 
-.pagu form .fila .colum .inputBox img {
-  height: 34px;
-  margin-top: 5px;
-  filter: drop-shadow(0 0 1px #000);
+.input-group input, .input-group-half input {
+    width: 93%; /* Ancho del campo */
+    padding: 12px; /* Espaciado interno */
+    border: 1px solid #1E90FF; /* Borde del campo */
+    border-radius: 8px; /* Bordes redondeados */
+    font-size: 1rem; /* Tamaño de fuente */
 }
 
-.pagu form .submit-btn {
-  width: 100%;
-  padding: 12px;
-  font-size: 17px;
-  background: #6582e0;
-  color: #fff;
-  margin-top: 5px;
-  cursor: pointer;
+.btn-submit {
+    width: 100%; /* Ancho completo del botón */
+    padding: 12px; /* Espaciado interno */
+    background-color: #1E90FF; /* Color de fondo del botón */
+    color: white; /* Color del texto del botón */
+    border: none; /* Sin borde */
+    border-radius: 8px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    font-size: 1rem; /* Tamaño de fuente */
+    font-weight: bold; /* Texto en negrita */
+    transition: background-color 0.3s ease; /* Efecto de transición para el color de fondo */
 }
 
-.container form .submit-btn:hover {
-  background: #68c2fd;
+.btn-submit:hover {
+    background-color: #00509E; /* Color de fondo al pasar el ratón */
+}
+
+.payment-icon {
+    font-size: 3rem; /* Tamaño del ícono */
+    color: #00BFFF; /* Color del ícono */
+    margin-bottom: 16px; /* Espacio inferior */
 }

@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Admin</title>
+    <!-- ======= Styles ====== -->
+    <link rel="stylesheet" href="../css/style-dash.css">
+</head>
+
+<body>
+    <!-- =============== Navigation ================ -->
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="dash.html">
+                        <span class="icon">
+                            <ion-icon name="logo-ionitron"></ion-icon>
+                        </span>
+                        <span class="title">GuímarBot</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="dash.html">
+                        <span class="icon">
+                            <ion-icon name="home-outline"></ion-icon>
+                        </span>
+                        <span class="title">Inicio</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="clientes.html">
+                        <span class="icon">
+                            <ion-icon name="people-outline"></ion-icon>
+                        </span>
+                        <span class="title">Clientes</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="roles.html">
+                        <span class="icon">
+                            <ion-icon name="person-add-outline"></ion-icon>
+                        </span>
+                        <span class="title">Roles y Usuarios</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="terminal-outline"></ion-icon>
+                        </span>
+                        <span class="title">Cursos</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="videocam-outline"></ion-icon>
+                        </span>
+                        <span class="title">Videos</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="bar-chart-outline"></ion-icon>
+                        </span>
+                        <span class="title">Estadísticas</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="rocket-outline"></ion-icon>
+                        </span>
+                        <span class="title">Becas</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="configuracion.html">
+                        <span class="icon">
+                            <ion-icon name="settings-outline"></ion-icon>
+                        </span>
+                        <span class="title">Configuración</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="principal.html">
+                        <span class="icon">
+                            <ion-icon name="log-out-outline"></ion-icon>
+                        </span>
+                        <span class="title">Sign Out</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- ========================= Main ==================== -->
+        <div class="main">
+            <div class="topbar">
+                <div class="toggle">
+                    <ion-icon name="menu-outline"></ion-icon>
+                </div>
+
+                <div class="search">
+                    <label>
+                        <input type="text" placeholder="Search here">
+                        <ion-icon name="search-outline"></ion-icon>
+                    </label>
+                </div>
+
+                <div class="user">
+                    <img src="../images/Ingeniero-de-Sistemas-de-la-UCV-es-gerente-general-750.jpg" alt="">
+                </div>
+            </div>
+
+            <!-- ======================= Cards ================== -->
+            <div class="cardBox">
+                <div class="card">
+                    <div>
+                        <div class="numbers">1,504</div>
+                        <div class="cardName">Visitas Diarias</div>
+                    </div>
+
+                    <div class="iconBx">
+                        <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <div class="numbers">80</div>
+                        <div class="cardName">Ventas</div>
+                    </div>
+
+                    <div class="iconBx">
+                        <ion-icon name="cart-outline"></ion-icon>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <div class="numbers">284</div>
+                        <div class="cardName">Comentarios</div>
+                    </div>
+
+                    <div class="iconBx">
+                        <ion-icon name="chatbubbles-outline"></ion-icon>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <div class="numbers">$7,842</div>
+                        <div class="cardName">Ganancias</div>
+                    </div>
+
+                    <div class="iconBx">
+                        <ion-icon name="cash-outline"></ion-icon>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ================ Add Charts Js ================= -->
+            <div class="chartsBx">
+                <div class="chart"> <canvas id="chart-1"></canvas> </div>
+                <div class="chart"> <canvas id="chart-2"></canvas> </div>
+            </div>
+
+            <!-- ================ Order Details List ================= -->
+            <div class="details">
+                <div class="recentOrders">
+                    <div class="cardHeader">
+                        <h2>Compras Recientes</h2>
+                        <a href="#" class="btn">Ver Todo</a>
+                    </div>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>Nombre</td>
+                                <td>Precio</td>
+                                <td>Fecha</td>
+                                <td>Categoria</td>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>Jhony Cerna</td>
+                                <td>S/.50</td>
+                                <td>14/02/2024</td>
+                                <td><span class="status delivered">Python</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>Juan Naito</td>
+                                <td>S/.100</td>
+                                <td>15/12/2023</td>
+                                <td><span class="status pending">JavaScript</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>Ana Medina</td>
+                                <td>S/.60</td>
+                                <td>14/08/2021</td>
+                                <td><span class="status return">HTML</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>Pepito Perez</td>
+                                <td>S/.20</td>
+                                <td>20/10/2024</td>
+                                <td><span class="status inProgress">CSS</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>Maria Mendoza</td>
+                                <td>S/.40</td>
+                                <td>16/11/2023</td>
+                                <td><span class="status delivered">Python</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>Carlitos Alcachofa</td>
+                                <td>S/.55</td>
+                                <td>22/03/2024</td>
+                                <td><span class="status pending">JavaScript</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>Pedro Campos</td>
+                                <td>S/.666</td>
+                                <td>07/05/2021</td>
+                                <td><span class="status return">HTML</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>Joselyn Carrasco</td>
+                                <td>S/.150</td>
+                                <td>29/12/2023</td>
+                                <td><span class="status inProgress">CSS</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- ================= New Customers ================ -->
+                <div class="recentCustomers">
+                    <div class="cardHeader">
+                        <h2>Clientes Recientes</h2>
+                    </div>
+
+                    <table>
+                        <tr>
+                            <td width="60px">
+                                <div class="imgBx"><img src="../images/customer02.jpg" alt=""></div>
+                            </td>
+                            <td>
+                                <h4>Jhony <br> <span>Perú</span></h4>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td width="60px">
+                                <div class="imgBx"><img src="../images/customer01.jpg" alt=""></div>
+                            </td>
+                            <td>
+                                <h4>Juan <br> <span>México</span></h4>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td width="60px">
+                                <div class="imgBx"><img src="../images/customer02.jpg" alt=""></div>
+                            </td>
+                            <td>
+                                <h4>Joselyn <br> <span>Perú</span></h4>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td width="60px">
+                                <div class="imgBx"><img src="../images/customer01.jpg" alt=""></div>
+                            </td>
+                            <td>
+                                <h4>Carlitos <br> <span>Chile</span></h4>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td width="60px">
+                                <div class="imgBx"><img src="../images/customer02.jpg" alt=""></div>
+                            </td>
+                            <td>
+                                <h4>Ana <br> <span>Perú</span></h4>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td width="60px">
+                                <div class="imgBx"><img src="../images/customer01.jpg" alt=""></div>
+                            </td>
+                            <td>
+                                <h4>María <br> <span>Perú</span></h4>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td width="60px">
+                                <div class="imgBx"><img src="../images/customer01.jpg" alt=""></div>
+                            </td>
+                            <td>
+                                <h4>Pedro <br> <span>Chile</span></h4>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td width="60px">
+                                <div class="imgBx"><img src="../images/customer02.jpg" alt=""></div>
+                            </td>
+                            <td>
+                                <h4>Pepito <br> <span>Perú</span></h4>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- =========== Scripts =========  -->
+    <script src="../js/main.js"></script>
+
+    <!-- =========== Charts JS =========  -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../js/chartsJS.js"></script>
+
+    <!-- ====== ionicons ======= -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

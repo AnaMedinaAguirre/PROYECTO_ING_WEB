@@ -1,0 +1,78 @@
+/* Reseteo de estilos para asegurar consistencia en todos los navegadores */
+* {
+    margin: 0; /* Elimina el margen por defecto */
+    padding: 0; /* Elimina el padding por defecto */
+    box-sizing: border-box; /* Incluye padding y borde en el tamaño total de los elementos */
+}
+
+body {
+    font-family: 'Arial', sans-serif; /* Fuente principal */
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef); /* Degradado de fondo */
+    background-image: url('../images/ede.webp'); /* Imagen de fondo */
+    background-size: cover; /* Asegura que la imagen de fondo cubra toda la pantalla */
+    background-position: center; /* Centra la imagen de fondo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    height: 100vh; /* Altura completa de la ventana */
+    display: flex; /* Utiliza flexbox para centrar el contenido */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco semi-transparente */
+    padding: 25px; /* Espaciado interno */
+    border-radius: 15px; /* Bordes redondeados */
+    width: 100%; /* Ancho completo */
+    max-width: 650px; /* Ancho máximo */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+h1 {
+    text-align: center; /* Alineación centrada */
+    color: #005fc4; /* Color del título */
+    margin-bottom: 20px; /* Espacio inferior */
+}
+
+p {
+    text-align: center; /* Alineación centrada */
+    font-size: 1.1rem; /* Tamaño de fuente */
+    color: #000000; /* Color del texto */
+    margin-bottom: 20px; /* Espacio inferior */
+}
+
+form {
+    display: flex; /* Utiliza flexbox para el formulario */
+    flex-direction: column; /* Organiza los elementos en columnas */
+}
+
+label {
+    margin-bottom: 8px; /* Espacio inferior */
+    color: #333; /* Color de la etiqueta */
+}
+
+input[type="text"], input[type="email"], input[type="file"], textarea {
+    padding: 10px; /* Espaciado interno */
+    margin-bottom: 20px; /* Espacio inferior */
+    border: 1px solid #1a1a1a; /* Borde */
+    border-radius: 8px; /* Bordes redondeados */
+    font-size: 1rem; /* Tamaño de fuente */
+}
+
+textarea {
+    resize: none; /* Desactiva el redimensionamiento del área de texto */
+}
+
+button {
+    padding: 15px; /* Espaciado interno del botón */
+    background-color: #007bff; /* Color de fondo del botón */
+    color: #fff; /* Color del texto del botón */
+    border: none; /* Sin borde */
+    border-radius: 8px; /* Bordes redondeados */
+    font-size: 1rem; /* Tamaño de fuente del botón */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: background-color 0.3s ease; /* Efecto de transición para el cambio de color */
+}
+
+button:hover {
+    background-color: #0056b3; /* Color de fondo al pasar el mouse */
+}

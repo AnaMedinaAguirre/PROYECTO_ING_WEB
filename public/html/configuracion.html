@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en" class="light-style layout-menu-fixed" dir="ltr" data-theme="theme-default" data-assets-path="../assets/"
+    data-template="vertical-menu-template-free">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+
+    <title>Account settings</title>
+
+    <meta name="description" content="" />
+
+    <link rel="stylesheet" href="../css/style-dash.css">
+    <link rel="stylesheet" href="../css/style-configuracion.css">
+
+</head>
+
+<body>
+
+    <!-- =============== Navigation ================ -->
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="dash.html">
+                        <span class="icon">
+                            <ion-icon name="logo-ionitron"></ion-icon>
+                        </span>
+                        <span class="title">GuímarBot</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="dash.html">
+                        <span class="icon">
+                            <ion-icon name="home-outline"></ion-icon>
+                        </span>
+                        <span class="title">Inicio</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="clientes.html">
+                        <span class="icon">
+                            <ion-icon name="people-outline"></ion-icon>
+                        </span>
+                        <span class="title">Clientes</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="roles.html">
+                        <span class="icon">
+                            <ion-icon name="person-add-outline"></ion-icon>
+                        </span>
+                        <span class="title">Roles y Usuarios</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="terminal-outline"></ion-icon>
+                        </span>
+                        <span class="title">Cursos</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="videocam-outline"></ion-icon>
+                        </span>
+                        <span class="title">Videos</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="bar-chart-outline"></ion-icon>
+                        </span>
+                        <span class="title">Estadísticas</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="rocket-outline"></ion-icon>
+                        </span>
+                        <span class="title">Becas</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="configuracion.html">
+                        <span class="icon">
+                            <ion-icon name="settings-outline"></ion-icon>
+                        </span>
+                        <span class="title">Configuración</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="principal.html">
+                        <span class="icon">
+                            <ion-icon name="log-out-outline"></ion-icon>
+                        </span>
+                        <span class="title">Sign Out</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- ========================= Main ==================== -->
+        <div class="main">
+            <div class="topbar">
+                <div class="toggle">
+                    <ion-icon name="menu-outline"></ion-icon>
+                </div>
+
+                <div class="search">
+                    <label>
+                        <input type="text" placeholder="Search here">
+                        <ion-icon name="search-outline"></ion-icon>
+                    </label>
+                </div>
+                
+                
+
+                <div class="user">
+                    <img src="../images/Ingeniero-de-Sistemas-de-la-UCV-es-gerente-general-750.jpg" alt="">
+                </div>
+            </div>
+
+            <!-- ======================= Content ================== -->
+            <div class="content-wrapper">
+                <div class="container-xxl flex-grow-1 container-p-y">
+                    <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Configuraciones de la cuenta /</span> Cuenta
+                    </h4>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card mb-4">
+                                <h5 class="card-header">Detalles del perfil</h5>
+                                <!-- Account -->
+                                <div class="card-body">
+                                    <div class="d-flex align-items-start align-items-sm-center gap-4">
+                                        <img src="../images/Ingeniero-de-Sistemas-de-la-UCV-es-gerente-general-750.jpg"
+                                            alt="user-avatar" class="d-block rounded" height="100" width="100" id="uploadedAvatar" />
+                                        <div class="button-wrapper">
+                                            <label for="upload" class="btn btn-primary me-2 mb-4" tabindex="0">
+                                                <span class="d-none d-sm-block">Subir nueva foto</span>
+                                                <i class="bx bx-upload d-block d-sm-none"></i>
+                                                <input type="file" id="upload" class="account-file-input" hidden accept="image/png, image/jpeg" />
+                                            </label>
+                                            <button type="button" class="btn btn-outline-secondary account-image-reset mb-4">
+                                                <i class="bx bx-reset d-block d-sm-none"></i>
+                                                <span class="d-none d-sm-block">Reiniciar</span>
+                                            </button>
+                                            <p class="text-muted mb-0">JPG, GIF o PNG permitidos. Tamaño máximo de 800K</p>
+                                        </div>
+                                    </div>                                                                  
+                                </div>
+                                <hr class="my-0" />
+                                <div class="card-body">
+                                    <form id="formAccountSettings" method="POST" onsubmit="return false">
+                                        <div class="row">
+                                            <div class="mb-3 col-md-6">
+                                                <label for="firstName" class="form-label">NOMBRE</label>
+                                                <input class="form-control" type="text" id="firstName" name="firstName"
+                                                    value="John" autofocus />
+                                            </div>
+                                            <div class="mb-3 col-md-6">
+                                                <label for="lastName" class="form-label">APELLIDO</label>
+                                                <input class="form-control" type="text" name="lastName" id="lastName"
+                                                    value="Doe" />
+                                            </div>
+                                            <div class="mb-3 col-md-6">
+                                                <label for="email" class="form-label">GMAIL</label>
+                                                <input class="form-control" type="text" id="email" name="email"
+                                                    value="john.doe@example.com" placeholder="john.doe@example.com" />
+                                            </div>
+                                            <div class="mb-3 col-md-6">
+                                                <label class="form-label" for="phoneNumber">NÚMERO DE TELÉFONO</label>
+                                                <div class="input-group input-group-merge">
+                                                    <input type="text" id="phoneNumber" name="phoneNumber"
+                                                        class="form-control" placeholder="+51 918764329" />
+                                                </div>
+                                            </div>
+                                            <div class="mb-3 col-md-6">
+                                                <label for="address" class="form-label">DIRECCIÓN</label>
+                                                <input type="text" class="form-control" id="address" name="address"
+                                                    placeholder="Address" />
+                                            </div>
+                                            <div class="mb-3 col-md-6">
+                                                <label class="form-label" for="country">PAÍS</label>
+                                                <select id="country" class="select2 form-select">
+                                                    <option value="">Selecciona</option>
+                                                    <option value="Mexico">Mexico</option>
+                                                    <option value="Peru">Perú</option>
+                                                    <option value="Colombia">Colombia</option>
+                                                    <option value="Ecuador">Ecuador</option>
+                                                    <option value="Chile">Chile</option>
+                                                    <option value="España">España</option>
+                                                    <option value="Estados Unidos">Estados Unidos</option>
+                                                    <option value="Argentina">Argentina</option>
+                                                    <option value="Bolivia">Bolivia</option>
+                                                </select>
+                                            </div>
+                                            <div class="mb-3 col-md-6">
+                                                <label for="language" class="form-label">IDIOMA</label>
+                                                <select id="language" class="select2 form-select">
+                                                    <option value="">Selecciona tu idioma</option>
+                                                    <option value="es">Español</option>
+                                                    <option value="en">Inglés</option>
+                                                    <option value="fr">Francés</option>
+                                                    <option value="pt">Portugües</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="mt-2">
+                                            <button type="submit" class="btn btn-primary me-2">Guardar Cambios</button>
+                                            <button type="reset" class="btn btn-outline-secondary">Cancelar</button>
+                                        </div>
+                                    </form>
+                                </div>
+                                <!-- /Account -->
+                            </div>
+                            <div class="card">
+                                <h5 class="card-header">Eliminar Cuenta</h5>
+                                <div class="card-body">
+                                    <div class="mb-3 col-12 mb-0">
+                                        <div class="alert alert-warning">
+                                            <h6 class="alert-heading fw-bold mb-1">¿Estás seguro de que quieres eliminar
+                                                tu cuenta?</h6>
+                                            <p class="mb-0">Una vez que eliminas tu cuenta, no hay vuelta atrás. Por
+                                                favor esté seguro.</p>
+                                        </div>
+                                    </div>
+                                    <form id="formAccountDeactivation" onsubmit="return false">
+                                        <div class="form-check mb-3">
+                                            <input class="form-check-input" type="checkbox" name="accountActivation"
+                                                id="accountActivation" />
+                                            <label class="form-check-label" for="accountActivation">Confirmo la
+                                                desactivación de mi cuenta</label>
+                                        </div>
+                                        <button type="submit" class="btn btn-danger deactivate-account">Desactivar
+                                            Cuenta</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- / Content -->
+            </div>
+        </div>
+    </div>
+
+    <!-- =========== Scripts =========  -->
+    <script src="../js/main.js"></script>
+    <script src="../js/script-configuracion.js"></script>
+
+    <!-- =========== Charts JS =========  -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../js/chartsJS.js"></script>
+
+    <!-- ====== ionicons ======= -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,149 @@
+* {
+    margin: 0; /* Elimina el margen por defecto */
+    padding: 0; /* Elimina el padding por defecto */
+    box-sizing: border-box; /* Incluye padding y borde en el tamaño total de los elementos */
+}
+
+body {
+    font-family: 'Arial', sans-serif; /* Fuente principal de la página */
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/KIDS.jpg') no-repeat center center fixed; /* Fondo con degradado sobre imagen */
+    background-size: cover; /* Asegura que la imagen de fondo cubra toda la pantalla */
+    color: #333; /* Color del texto */
+}
+
+.container {
+    width: 100%; /* Contenedor de ancho completo */
+    height: 100vh; /* Altura completa de la ventana del navegador */
+    display: flex; /* Utiliza flexbox para organizar el contenido */
+    flex-direction: column; /* Coloca los elementos en columnas */
+    justify-content: center; /* Centra los elementos verticalmente */
+    align-items: center; /* Centra los elementos horizontalmente */
+}
+
+/* Contenido principal */
+.main-content {
+    display: flex; /* Utiliza flexbox para el contenido principal */
+    width: 90%; /* Ancho del contenido principal */
+    height: 90vh; /* Altura del contenido principal */
+    max-width: 1700px; /* Ancho máximo */
+}
+
+/* Sección de video */
+.video-section {
+    flex: 2; /* Esta sección ocupa el doble del espacio que la sección de comentarios */
+    padding: 20px; /* Espaciado interno */
+    background-color: #ffffff94; /* Fondo blanco semi-transparente */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    margin-right: 20px; /* Espacio a la derecha */
+}
+
+.video-section iframe {
+    width: 100%; /* Ancho completo para el iframe */
+    height: 600px; /* Altura fija */
+    border-radius: 10px; /* Bordes redondeados para el iframe */
+    border: 2px solid #4253ee; /* Borde de color específico */
+}
+
+.video-info {
+    margin-top: 15px; /* Espacio superior */
+}
+
+.video-info h3 {
+    font-size: 30px; /* Tamaño de fuente para el título */
+    color: #2c3e50; /* Color del título */
+}
+
+.video-info p {
+    font-size: 16px; /* Tamaño de fuente para los párrafos */
+    color: #000000; /* Color del texto */
+}
+
+.brief-review {
+    margin-top: 10px; /* Espacio superior */
+    font-size: 15px; /* Tamaño de fuente */
+    color: #34495e; /* Color del texto */
+}
+
+/* Sección de comentarios */
+.comments-section {
+    flex: 1; /* Ocupa el espacio restante */
+    background-color: #ffffff94; /* Fondo blanco semi-transparente */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    display: flex; /* Utiliza flexbox para la sección de comentarios */
+    flex-direction: column; /* Organiza los comentarios en columnas */
+    max-height: 90vh; /* Altura máxima */
+    overflow-y: scroll; /* Permite el desplazamiento vertical */
+}
+
+.comment-input {
+    display: flex; /* Utiliza flexbox para el campo de entrada */
+    margin-bottom: 20px; /* Espacio inferior */
+}
+
+.comment-input input {
+    flex: 1; /* Ocupa el espacio restante */
+    padding: 10px; /* Espaciado interno */
+    border: 2px solid #bdc3c7; /* Borde gris claro */
+    border-radius: 5px; /* Bordes redondeados */
+    background-color: #ffffff; /* Fondo blanco */
+    color: #2c3e50; /* Color del texto */
+    margin-right: 10px; /* Espacio a la derecha */
+    font-size: 16px; /* Tamaño de fuente */
+}
+
+.comment-input button {
+    padding: 10px 20px; /* Espaciado interno del botón */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    background-color: #6656f7; /* Color de fondo del botón */
+    color: white; /* Color del texto del botón */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    font-size: 16px; /* Tamaño de fuente */
+    transition: background-color 0.3s ease; /* Efecto de transición para el cambio de color */
+}
+
+.comment-input button:hover {
+    background-color: #6656f7; /* Color de fondo al pasar el mouse (no cambia aquí) */
+}
+
+.comment {
+    background-color: #ffffff; /* Fondo blanco para cada comentario */
+    padding: 15px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    margin-bottom: 20px; /* Espacio inferior entre comentarios */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Sombra suave */
+}
+
+.comment .username {
+    font-weight: bold; /* Texto en negrita para el nombre de usuario */
+    color: #2c3e50; /* Color del nombre de usuario */
+}
+
+.comment .time {
+    font-size: 12px; /* Tamaño de fuente para la fecha */
+    color: #7f8c8d; /* Color gris para la fecha */
+}
+
+.comment .text {
+    margin: 10px 0; /* Espacio vertical entre elementos */
+    font-size: 15px; /* Tamaño de fuente del texto del comentario */
+}
+
+.code-block {
+    background-color: rgb(202, 202, 202); /* Fondo gris claro para el bloque de código */
+    padding: 10px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    color: #b416fd; /* Color del texto del código */
+    font-family: monospace; /* Fuente monoespaciada para el código */
+    font-size: 14px; /* Tamaño de fuente del código */
+    margin-top: 10px; /* Espacio superior */
+}
+
+.likes {
+    margin-top: 10px; /* Espacio superior */
+    color: #6656f7; /* Color de las reacciones */
+    font-size: 14px; /* Tamaño de fuente de las reacciones */
+}
