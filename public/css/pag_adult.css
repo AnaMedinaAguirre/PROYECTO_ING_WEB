@@ -1,34 +1,33 @@
 * {
-    margin: 0; /* Elimina el margen por defecto */
-    padding: 0; /* Elimina el padding por defecto */
+    margin: 0; /* Elimina el margen por defecto de todos los elementos */
+    padding: 0; /* Elimina el padding por defecto de todos los elementos */
     box-sizing: border-box; /* Incluye padding y borde en el tamaño total de los elementos */
 }
 
 body {
-    font-family: 'Arial', sans-serif; /* Fuente principal de la página */
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/KIDS.jpg') no-repeat center center fixed; /* Fondo con degradado sobre imagen */
+    font-family: 'Arial', sans-serif; /* Establece la fuente principal de la página */
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/KIDS.webp') no-repeat center center fixed; /* Fondo con un degradado oscuro sobre una imagen */
     background-size: cover; /* Asegura que la imagen de fondo cubra toda la pantalla */
     color: #333; /* Color del texto */
 }
 
 .container {
     width: 100%; /* Contenedor de ancho completo */
-    height: 100vh; /* Altura completa de la ventana del navegador */
+    height: auto; /* Altura completa de la ventana del navegador */
+    margin-top: 20px;
     display: flex; /* Utiliza flexbox para organizar el contenido */
     flex-direction: column; /* Coloca los elementos en columnas */
     justify-content: center; /* Centra los elementos verticalmente */
     align-items: center; /* Centra los elementos horizontalmente */
 }
 
-/* Contenido principal */
 .main-content {
     display: flex; /* Utiliza flexbox para el contenido principal */
     width: 90%; /* Ancho del contenido principal */
-    height: 90vh; /* Altura del contenido principal */
+    height: auto; /* Altura del contenido principal */
     max-width: 1700px; /* Ancho máximo */
 }
 
-/* Sección de video */
 .video-section {
     flex: 2; /* Esta sección ocupa el doble del espacio que la sección de comentarios */
     padding: 20px; /* Espaciado interno */
@@ -65,7 +64,6 @@ body {
     color: #34495e; /* Color del texto */
 }
 
-/* Sección de comentarios */
 .comments-section {
     flex: 1; /* Ocupa el espacio restante */
     background-color: #ffffff94; /* Fondo blanco semi-transparente */
@@ -98,7 +96,7 @@ body {
     padding: 10px 20px; /* Espaciado interno del botón */
     border: none; /* Sin borde */
     border-radius: 5px; /* Bordes redondeados */
-    background-color: #6656f7; /* Color de fondo del botón */
+    background-color: #4253ee; /* Fondo color amarillo #e7a921*/
     color: white; /* Color del texto del botón */
     cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
     font-size: 16px; /* Tamaño de fuente */
@@ -106,7 +104,7 @@ body {
 }
 
 .comment-input button:hover {
-    background-color: #6656f7; /* Color de fondo al pasar el mouse (no cambia aquí) */
+    background-color: #e7a921; /* Color de fondo al pasar el mouse (no cambia aquí) */
 }
 
 .comment {
@@ -118,7 +116,7 @@ body {
 }
 
 .comment .username {
-    font-weight: bold; /* Texto en negrita para el nombre de usuario */
+    font-weight: bold; /* Texto en negrita */
     color: #2c3e50; /* Color del nombre de usuario */
 }
 
@@ -144,6 +142,63 @@ body {
 
 .likes {
     margin-top: 10px; /* Espacio superior */
-    color: #6656f7; /* Color de las reacciones */
+    color: #4253ee; /* Color de las reacciones */
     font-size: 14px; /* Tamaño de fuente de las reacciones */
+}
+
+/* Media Queries para pantallas más pequeñas */
+
+@media (max-width: 1200px) {
+    .main-content {
+        flex-direction: column; /* Apilar en pantallas más pequeñas */
+        align-items: center; /* Alinear los elementos en el centro */
+    }
+
+    .video-section {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .video-section iframe {
+        height: 300px; /* Ajustar la altura para pantallas más pequeñas */
+    }
+
+    .video-info h3 {
+        font-size: 20px;
+    }
+
+    .video-info p, .brief-review {
+        font-size: 14px;
+    }
+
+    .comment-input button {
+        font-size: 14px;
+    }
+
+    .comment {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .video-section iframe {
+        height: 200px; /* Más pequeño para móviles */
+    }
+
+    .video-info h3 {
+        font-size: 18px;
+    }
+
+    .video-info p, .brief-review {
+        font-size: 12px;
+    }
+
+    .comment-input button {
+        font-size: 12px;
+    }
+
+    .comment {
+        font-size: 12px;
+    }
 }

@@ -1,163 +1,156 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
-    padding: 20px;
-}
-
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-h1 {
-    text-align: left;
-    margin-bottom: 20px;
-}
-
-.cart {
-    margin-bottom: 30px;
-}
-
-.subtitulo-1{
+.cart-container {
     display: flex;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #ddd;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
 }
 
-.course {
+.cart-items {
+    width: 60%;
+}
+
+.cart-items h2 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.cart-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px;
-    border-bottom: 1px solid #ddd;
-}
-.course-details-1{
-    display: flex;
-    padding-right: 100px;
-    line-height: 1.5;
-    flex-direction: column;
-}
-.course-details-2{
-    display: flex;
-    padding-right: 270px;
-    line-height: 1.5;
-    flex-direction: column;
-}
-.imagen img{
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 10px;
-    transition: all .5s;
-}
-.imagen figure{
-    overflow: hidden;
-
-}
-.course-details h4 {
-    margin-bottom: 10px;
-    font-size: 18px;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
 }
 
-.best-seller {
-    color: #ff9900;
-    font-weight: bold;
+.cart-item img {
+    width: 80px;
+    margin-right: 20px;
 }
 
-.course-price {
-    font-size: 18px;
-    color: #333;
-    text-align: right;
-}
-
-button {
-    background-color: #6633cc;
+.cart-item-details {
+    flex-grow: 1;
     color: white;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    border-radius: 4px;
 }
 
-button:hover {
-    background-color: #5a2db1;
+.cart-item-actions {
+    display: flex;
+    align-items: center;
+    color: white;
 }
 
-.total-section {
-    text-align: right;
-    margin-bottom: 20px;
-    word-spacing: 5px; 
-    
-}
-.total-section h3{
-    padding-bottom: 10px;
-}
-.total-section button{
-    padding: bottom 20px;
+.cart-item-actions a {
+    color: #A0A0A0;
+    text-decoration: none;
+    margin-right: 15px;
 }
 
-.subtitulo-2{
-    font-size: 18px;
-    margin-bottom: 30px;
-
+.cart-item-actions a:hover {
+    text-decoration: underline;
 }
 
-.discount {
-    color: green;
+.cart-summary {
+    width: 35%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: white;
+}
+
+.cart-summary h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.cart-summary .total {
+    font-size: 1.8rem;
     font-weight: bold;
+    margin: 20px 0;
 }
 
-.pay-button {
-    background-color: #ff0099;
-}
-
-.promotions {
+.cart-summary button {
+    width: 100%;
+    padding: 15px;
+    background-color: #7a3cff;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 20px;
     margin-top: 20px;
 }
 
-.promotions input {
-    padding: 10px;
-    width: 60%;
-    margin-right: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+.cart-summary button:hover {
+    background-color: #5f2fcc;
 }
 
-.recommendations {
-    padding: 30px 0 40px 60px;
-    
-    
-    
-}
-
-.recommended-course {
-    display: inline-block;
-    width: 30%;
-    text-align: center;
-    margin-right: 10px;
-    vertical-align: top;
-}
-
-.recommended-course img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 4px;
+.cart-summary .promo-code {
+    display: flex;
     margin-bottom: 10px;
 }
 
-.recommended-course h4 {
-    font-size: 16px;
-    margin-bottom: 5px;
+.cart-summary input[type="text"] {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    margin-bottom: 20px;
+    margin-top: 20px;
 }
 
+.cart-summary button.promo-apply {
+    background-color: #7a3cff;
+    border-radius: 0 5px 5px 0;
+    margin-left: -1px;
+}
+
+/* Responsividad para pantallas medianas */
+@media (max-width: 768px) {
+    .cart-container {
+        flex-direction: column;
+    }
+
+    .cart-items, .cart-summary {
+        width: 100%;
+    }
+
+    .cart-summary .promo-code {
+        flex-direction: column;
+    }
+
+    .cart-summary input[type="text"] {
+        margin-bottom: 10px;
+        border-radius: 5px; /* Cambiar bordes para alinearlo en vertical */
+    }
+
+    .cart-summary button.promo-apply {
+        width: 100%; /* Asegurarse de que el botón ocupe el 100% del ancho */
+        border-radius: 5px; /* Bordes redondeados */
+    }
+}
+
+/* Responsividad para pantallas pequeñas */
+@media (max-width: 480px) {
+    .cart-summary h3 {
+        font-size: 1.2rem;
+    }
+
+    .cart-summary .total {
+        font-size: 1.4rem;
+    }
+
+    .cart-summary input[type="text"] {
+        padding: 8px;
+        font-size: 1rem;
+    }
+
+    .cart-summary button {
+        padding: 12px;
+        font-size: 1rem;
+    }
+}

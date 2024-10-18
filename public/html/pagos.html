@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style-pagos.css">
+    <title>PAGO</title>
+</head>
+<body>
+    <section class="pago-section">
+        <div class="container">
+            <div class="pago-wrapper">
+                <div class="pago-left">
+                    <div class="pago-header">
+                        <div class="pago-header-icon"><i class="ri-flashlight-fill"></i></div>
+                        <div class="pago-header-title">Orden de Pago</div>
+                        <p class="pago-header-description">estos son los productos que adquirió.</p>
+                    </div>
+                    <div class="pago-content">
+                        <div class="pago-body">
+                            <div class="pago-plan">
+                                <div class="pago-plan-type">Pro</div>
+                                <div class="pago-plan-info">
+                                    <div class="pago-plan-info-name">curso de java - Fundamentos y desarrollo</div>
+                                    <div class="pago-plan-info-price">$59.9</div>
+                                </div>
+                                <a href="#" class="pago-plan-change">Carga</a>
+                            </div>
+                            <div class="pago-slow">
+                                <div class="pago-slow-item">
+                                    <div class="pago-slow-name">Tarifa adicional</div>
+                                    <div class="pago-slow-price">$10</div>
+                                </div>
+                                <div class="pago-slow-item">
+                                    <div class="pago-slow-name">Descuento 20%</div>
+                                    <div class="pago-slow-price">-$10</div>
+                                </div>
+                                <div class="pago-slow-divider"></div>
+                                <div class="pago-slow-item pago-slow-total">
+                                    <div class="pago-slow-name">Total</div>
+                                    <div class="pago-slow-price">-$59.9</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pago-right">
+                    <form action="" class="pago-form">
+                        <h1 class="pago-title">Detalle de Pago</h1>
+                        <div class="pago-method">
+                            <input type="radio" name="pago-method" id="method-1" checked>
+                            <label for="method-1" class="pago-method-item">
+                                <img src="../images/visa.webp" alt="">
+                            </label>
+                            <input type="radio" name="pago-method" id="method-2">
+                            <label for="method-2" class="pago-method-item">
+                                <img src="../images/mastercard.webp" alt="">
+                            </label>
+                            <input type="radio" name="pago-method" id="method-3">
+                            <label for="method-3" class="pago-method-item">
+                                <img src="../images/paypal.webp" alt="">
+                            </label>
+            
+                            <div class="foto">
+                                <img src="../images/yape.webp" alt="">
+                            </div>
+                        </div>
+                        <div class="pago-form-group">
+                            <input type="email" placeholder=" " class="pago-form-control" id="email">
+                            <label for="email" class="pago-form-label pago-form-label-required">Correo Electrónico</label>
+                        </div>
+                        <div class="pago-form-group">
+                            <input type="text" placeholder=" " class="pago-form-control" id="card-number">
+                            <label for="card-number" class="pago-form-label pago-form-label-required">Numero de Tarjeta</label>
+                        </div>
+                        <div class="pago-form-group-flex">
+                            <div class="pago-form-group">
+                                <input type="date" placeholder=" " class="pago-form-control" id="expiry-date">
+                                <label for="expiry-date" class="pago-form-label pago-form-label-required">Fecha de Vencimiento</label>
+                            </div>
+                            <div class="pago-form-group">
+                                <input type="text" placeholder=" " class="pago-form-control" id="cvv">
+                                <label for="cvv" class="pago-form-label pago-form-label-required">CVV</label>
+                            </div>
+                        </div>
+                        <button type="submit" class="pago-form-submit-button"><i class="ri-wallet-line"></i> PAGO</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

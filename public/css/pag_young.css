@@ -6,14 +6,15 @@
 
 body {
     font-family: 'Arial', sans-serif; /* Establece la fuente principal de la página */
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/younh.avif') no-repeat center center fixed; /* Fondo con un degradado oscuro sobre una imagen */
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/younh.webp') no-repeat center center fixed; /* Fondo con un degradado oscuro sobre una imagen */
     background-size: cover; /* Asegura que la imagen de fondo cubra toda la pantalla */
     color: #333; /* Color del texto */
 }
 
 .container {
     width: 100%; /* Contenedor de ancho completo */
-    height: 100vh; /* Altura completa de la ventana del navegador */
+    height: auto; /* Altura completa de la ventana del navegador */
+    margin-top: 20px;
     display: flex; /* Utiliza flexbox para organizar el contenido */
     flex-direction: column; /* Coloca los elementos en columnas */
     justify-content: center; /* Centra los elementos verticalmente */
@@ -23,7 +24,7 @@ body {
 .main-content {
     display: flex; /* Utiliza flexbox para el contenido principal */
     width: 90%; /* Ancho del contenido principal */
-    height: 90vh; /* Altura del contenido principal */
+    height: auto; /* Altura del contenido principal */
     max-width: 1700px; /* Ancho máximo */
 }
 
@@ -103,7 +104,7 @@ body {
 }
 
 .comment-input button:hover {
-    background-color: #e7a921; /* Color de fondo al pasar el mouse (no cambia aquí) */
+    background-color: skyblue; /* Color de fondo al pasar el mouse (no cambia aquí) */
 }
 
 .comment {
@@ -143,4 +144,61 @@ body {
     margin-top: 10px; /* Espacio superior */
     color: #6656f7; /* Color de las reacciones */
     font-size: 14px; /* Tamaño de fuente de las reacciones */
+}
+
+/* Media Queries para pantallas más pequeñas */
+
+@media (max-width: 1200px) {
+    .main-content {
+        flex-direction: column; /* Apilar en pantallas más pequeñas */
+        align-items: center; /* Alinear los elementos en el centro */
+    }
+
+    .video-section {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .video-section iframe {
+        height: 300px; /* Ajustar la altura para pantallas más pequeñas */
+    }
+
+    .video-info h3 {
+        font-size: 20px;
+    }
+
+    .video-info p, .brief-review {
+        font-size: 14px;
+    }
+
+    .comment-input button {
+        font-size: 14px;
+    }
+
+    .comment {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .video-section iframe {
+        height: 200px; /* Más pequeño para móviles */
+    }
+
+    .video-info h3 {
+        font-size: 18px;
+    }
+
+    .video-info p, .brief-review {
+        font-size: 12px;
+    }
+
+    .comment-input button {
+        font-size: 12px;
+    }
+
+    .comment {
+        font-size: 12px;
+    }
 }

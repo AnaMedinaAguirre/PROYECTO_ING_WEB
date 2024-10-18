@@ -42,21 +42,24 @@ async (accessToken, refreshToken, profile, done) => {
 }));
 
 
-// Registrar un nuevo usuarioooooo
+// Registrar un nuevo usuario
 exports.registerUser = async (req, res) => {
-    const { username, password, email, firstName, lastName } = req.body;
+    const { username, password, email, firstName, lastName, phone, dateOfBirth, address } = req.body;
 
-    if (!username || !password || !email || !firstName || !lastName) {
+    // Validar que todos los campos requeridos están presentes
+    if (!username || !password || !email || !firstName || !lastName || !phone || !dateOfBirth || !address) {
         return res.status(400).json({ message: 'Todos los campos son requeridos' });
     }
 
     try {
-        // Cifrar contraseña
+        // Cifrar la contraseña
         const hashedPassword = await bcrypt.hash(password, 10);
 
-        // Inserta el nuevo usuario en la base de datos
-        const query = 'INSERT INTO users (username, password, email, provider, firstName, lastName) VALUES (?, ?, ?, ?, ?, ?)';
-        connection.query(query, [username, hashedPassword, email, 'local', firstName, lastName], (error, results) => {
+        // Inserta el nuevo usuario en la base de datos con los campos nuevos
+        const query = `INSERT INTO users (username, password, email, provider, firstName, lastName, phone, dateOfBirth, address) 
+                        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)`;
+        connection.query(query, [username, hashedPassword, email, 'local', firstName, lastName, phone, dateOfBirth, address], 
+        (error, results) => {
             if (error) {
                 return res.status(500).json({ message: 'Error al registrar el usuario', error });
             }

@@ -1,14 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 /* Reseteo de estilos para asegurar consistencia en todos los navegadores */
 * {
     margin: 0; /* Elimina el margen por defecto */
     padding: 0; /* Elimina el padding por defecto */
     box-sizing: border-box; /* Incluye padding y borde en el tamaño total de los elementos */
 }
-
 body {
-    font-family: 'Arial', sans-serif; /* Fuente principal */
-    background: linear-gradient(135deg, #f8f9fa, #e9ecef); /* Degradado de fondo */
-    background-image: url('../images/ede.webp'); /* Imagen de fondo */
+    font-family: 'Poppins', sans-serif; /* Fuente principal */
+    background: #d4d3d3d5;
     background-size: cover; /* Asegura que la imagen de fondo cubra toda la pantalla */
     background-position: center; /* Centra la imagen de fondo */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
@@ -17,62 +16,90 @@ body {
     justify-content: center; /* Centra el contenido horizontalmente */
     align-items: center; /* Centra el contenido verticalmente */
 }
-
 .container {
-    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco semi-transparente */
-    padding: 25px; /* Espaciado interno */
-    border-radius: 15px; /* Bordes redondeados */
-    width: 100%; /* Ancho completo */
-    max-width: 650px; /* Ancho máximo */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    border-radius: 15px;
+    width: 85%;
+    max-width: 850px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between; /* Distribuye el contenido a los extremos */
+    align-items: flex-start; /* Alinea el contenido superior */
+}
+.left-section {
+    width: 40%; /* Ocupa el 40% del ancho del contenedor */
+    text-align: left; /* Alinea el texto a la izquierda */
+}
+
+.right-section {
+    width: 55%; /* Ocupa el 55% del ancho del contenedor */
 }
 
 h1 {
-    text-align: center; /* Alineación centrada */
-    color: #005fc4; /* Color del título */
-    margin-bottom: 20px; /* Espacio inferior */
+    font-size: 2rem; /* Ajusta el tamaño de fuente */
+    color: #000; /* Color del texto */
+    margin-bottom: 15px; /* Espacio inferior */
+    text-align: left; /* Alinea el texto a la izquierda */
 }
 
 p {
-    text-align: center; /* Alineación centrada */
-    font-size: 1.1rem; /* Tamaño de fuente */
-    color: #000000; /* Color del texto */
+    font-size: 1rem; /* Ajusta el tamaño de fuente */
+    color: #333; /* Color del texto */
     margin-bottom: 20px; /* Espacio inferior */
+    text-align: left; /* Alinea el texto a la izquierda */
 }
 
+.form-image {
+    width: 85%; /* Ajusta el tamaño de la imagen */
+    height: auto; /* Mantiene proporción de la imagen */
+    margin-bottom: 25px; /* Espacio inferior */
+    border-radius: 25px;
+}
+.text-content {
+    text-align: center; /* Centra el texto horizontalmente */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%; /* Ocupa solo la mitad izquierda */
+}
+
+.form-content {
+    flex: 1; /* Ocupa el espacio restante para el formulario */
+    padding-left: 20px;
+}
 form {
+    flex: 1; /* Ocupa otra parte del contenedor */
     display: flex; /* Utiliza flexbox para el formulario */
     flex-direction: column; /* Organiza los elementos en columnas */
 }
-
 label {
-    margin-bottom: 8px; /* Espacio inferior */
-    color: #333; /* Color de la etiqueta */
+    margin-bottom: 1px; /* Espacio inferior */
+    color: #05929c; /* Color de la etiqueta */
+    font-weight: bold; /* Grosor del texto aumentado */
 }
-
 input[type="text"], input[type="email"], input[type="file"], textarea {
-    padding: 10px; /* Espaciado interno */
-    margin-bottom: 20px; /* Espacio inferior */
+    padding: 12px; /* Espaciado interno */
+    margin-bottom: 10px; /* Espacio inferior */
     border: 1px solid #1a1a1a; /* Borde */
     border-radius: 8px; /* Bordes redondeados */
-    font-size: 1rem; /* Tamaño de fuente */
+    font-size: 1.1rem; /* Tamaño de fuente aumentado */
 }
-
 textarea {
     resize: none; /* Desactiva el redimensionamiento del área de texto */
 }
-
 button {
     padding: 15px; /* Espaciado interno del botón */
-    background-color: #007bff; /* Color de fondo del botón */
-    color: #fff; /* Color del texto del botón */
+    background-color: #c4c1a3; /* Color de fondo del botón */
+    color: #2e2e2e; /* Color del texto del botón */
     border: none; /* Sin borde */
     border-radius: 8px; /* Bordes redondeados */
-    font-size: 1rem; /* Tamaño de fuente del botón */
+    font-size: 1.1rem; /* Tamaño de fuente aumentado */
+    font-weight: bold; /* Grosor del texto aumentado */
     cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
     transition: background-color 0.3s ease; /* Efecto de transición para el cambio de color */
 }
-
 button:hover {
-    background-color: #0056b3; /* Color de fondo al pasar el mouse */
+    background-color: #05929c; /* Color de fondo al pasar el mouse */
 }

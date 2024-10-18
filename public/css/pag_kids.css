@@ -1,60 +1,56 @@
 * {
-    margin: 0; /* Elimina márgenes predeterminados */
-    padding: 0; /* Elimina rellenos predeterminados */
-    box-sizing: border-box; /* padding y el border no incrementen el tamaño total del elemento */
+    margin: 0; /* Elimina el margen por defecto de todos los elementos */
+    padding: 0; /* Elimina el padding por defecto de todos los elementos */
+    box-sizing: border-box; /* Incluye padding y borde en el tamaño total de los elementos */
 }
 
-/* Estilos para el cuerpo de la página */
 body {
-    font-family: 'Arial', sans-serif; /* Fuente de texto */
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/kind.jpg') no-repeat center center fixed; /* Imagen de fondo con un degradado oscuro para mayor contraste */
-    background-size: cover; /* Asegura que la imagen cubra toda la pantalla */
-    color: #333; /* Color del texto principal */
+    font-family: 'Arial', sans-serif; /* Establece la fuente principal de la página */
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/kind.webp') no-repeat center center fixed; /* Fondo con un degradado oscuro sobre una imagen */
+    background-size: cover; /* Asegura que la imagen de fondo cubra toda la pantalla */
+    color: #333; /* Color del texto */
 }
 
-/* Contenedor que envuelve toda la página */
 .container {
-    width: 100%; /* Ocupa todo el ancho disponible */
-    height: 100vh; /* Ocupa toda la altura de la pantalla */
-    display: flex; /* Establece un diseño flexible */
-    flex-direction: column; /* Los hijos se organizan en columna */
-    justify-content: center; /* Centra verticalmente los elementos */
-    align-items: center; /* Centra horizontalmente los elementos */
+    width: 100%; /* Contenedor de ancho completo */
+    height: auto; /* Altura completa de la ventana del navegador */
+    margin-top: 20px;
+    display: flex; /* Utiliza flexbox para organizar el contenido */
+    flex-direction: column; /* Coloca los elementos en columnas */
+    justify-content: center; /* Centra los elementos verticalmente */
+    align-items: center; /* Centra los elementos horizontalmente */
 }
 
-/* Estilos para el contenido principal */
 .main-content {
-    display: flex; /* Establece un diseño en fila para la sección de video y comentarios */
-    width: 90%; /* Ocupa el 90% del ancho de la pantalla */
-    height: 90vh; /* Ocupa el 90% de la altura de la pantalla */
-    max-width: 1700px; /* Define un ancho máximo para pantallas grandes */
+    display: flex; /* Utiliza flexbox para el contenido principal */
+    width: 90%; /* Ancho del contenido principal */
+    height: auto; /* Altura del contenido principal */
+    max-width: 1700px; /* Ancho máximo */
 }
 
-/* Sección que contiene el video */
 .video-section {
-    flex: 2; /* Ocupa dos tercios del espacio disponible */
-    padding: 20px; /* Espaciado interno alrededor del video */
-    background-color: #ffffff94; /* Fondo blanco semitransparente */
+    flex: 2; /* Esta sección ocupa el doble del espacio que la sección de comentarios */
+    padding: 20px; /* Espaciado interno */
+    background-color: #ffffff94; /* Fondo blanco semi-transparente */
     border-radius: 10px; /* Bordes redondeados */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
-    margin-right: 20px; /* Espaciado a la derecha del video */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    margin-right: 20px; /* Espacio a la derecha */
 }
 
 .video-section iframe {
-    width: 100%; /* Ocupa todo el ancho del contenedor */
-    height: 600px; /* Altura del video */
-    border-radius: 10px; /* Bordes redondeados */
-    border: 2px solid #16df48; /* Borde verde */
+    width: 100%; /* Ancho completo para el iframe */
+    height: 600px; /* Altura fija */
+    border-radius: 10px; /* Bordes redondeados para el iframe */
+    border: 2px solid green; /* Borde de color específico */
 }
 
-/* Información debajo del video */
 .video-info {
-    margin-top: 15px; /* Espaciado por encima */
+    margin-top: 15px; /* Espacio superior */
 }
 
 .video-info h3 {
-    font-size: 30px; /* Tamaño de fuente del título */
-    color: #2c3e50; /* Color oscuro para el título */
+    font-size: 30px; /* Tamaño de fuente para el título */
+    color: #2c3e50; /* Color del título */
 }
 
 .video-info p {
@@ -63,94 +59,146 @@ body {
 }
 
 .brief-review {
-    margin-top: 10px; /* Espaciado por encima */
+    margin-top: 10px; /* Espacio superior */
     font-size: 15px; /* Tamaño de fuente */
-    color: #34495e; /* Color gris oscuro */
+    color: #34495e; /* Color del texto */
 }
 
-/* Sección de comentarios */
 .comments-section {
-    flex: 1; /* Ocupa un tercio del espacio disponible */
-    background-color: #ffffff94; /* Fondo blanco semitransparente */
+    flex: 1; /* Ocupa el espacio restante */
+    background-color: #ffffff94; /* Fondo blanco semi-transparente */
     padding: 20px; /* Espaciado interno */
     border-radius: 10px; /* Bordes redondeados */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra */
-    display: flex;
-    flex-direction: column;
-    max-height: 90vh; /* Limita la altura para evitar que crezca demasiado */
-    overflow-y: scroll; /* Permite el desplazamiento vertical cuando hay muchos comentarios */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    display: flex; /* Utiliza flexbox para la sección de comentarios */
+    flex-direction: column; /* Organiza los comentarios en columnas */
+    max-height: 90vh; /* Altura máxima */
+    overflow-y: scroll; /* Permite el desplazamiento vertical */
 }
 
-/* Entrada de comentarios */
 .comment-input {
-    display: flex; /* Alinea el input y el botón en una fila */
-    margin-bottom: 20px; /* Espaciado inferior */
+    display: flex; /* Utiliza flexbox para el campo de entrada */
+    margin-bottom: 20px; /* Espacio inferior */
 }
 
 .comment-input input {
-    flex: 1; /* El input ocupa el máximo espacio posible */
+    flex: 1; /* Ocupa el espacio restante */
     padding: 10px; /* Espaciado interno */
-    border: 2px solid #bdc3c7; /* Borde gris */
+    border: 2px solid #bdc3c7; /* Borde gris claro */
     border-radius: 5px; /* Bordes redondeados */
     background-color: #ffffff; /* Fondo blanco */
-    color: #2c3e50; /* Texto oscuro */
-    margin-right: 10px; /* Espaciado a la derecha del botón */
+    color: #2c3e50; /* Color del texto */
+    margin-right: 10px; /* Espacio a la derecha */
     font-size: 16px; /* Tamaño de fuente */
 }
 
 .comment-input button {
-    padding: 10px 20px; /* Espaciado interno */
-    border: none; /* Sin bordes */
+    padding: 10px 20px; /* Espaciado interno del botón */
+    border: none; /* Sin borde */
     border-radius: 5px; /* Bordes redondeados */
-    background-color: #16df48; /* Fondo verde */
-    color: white; /* Texto blanco */
-    cursor: pointer; /* Cambia el cursor a "mano" al pasar por encima */
+    background-color: green; /* Fondo color amarillo #e7a921*/
+    color: white; /* Color del texto del botón */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
     font-size: 16px; /* Tamaño de fuente */
-    transition: background-color 0.3s ease; /* Efecto suave al cambiar el color del fondo */
+    transition: background-color 0.3s ease; /* Efecto de transición para el cambio de color */
 }
 
 .comment-input button:hover {
-    background-color: #16df48; /* Mismo color, sin cambios al hacer hover */
+    background-color: #e7a921 ; /* Color de fondo al pasar el mouse (no cambia aquí) */
 }
 
-/* Estilos para los comentarios */
 .comment {
-    background-color: #ffffff; /* Fondo blanco */
+    background-color: #ffffff; /* Fondo blanco para cada comentario */
     padding: 15px; /* Espaciado interno */
     border-radius: 10px; /* Bordes redondeados */
-    margin-bottom: 20px; /* Espaciado entre comentarios */
+    margin-bottom: 20px; /* Espacio inferior entre comentarios */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Sombra suave */
 }
 
 .comment .username {
-    font-weight: bold; /* Texto en negrita para el nombre de usuario */
-    color: #2c3e50; /* Color oscuro */
+    font-weight: bold; /* Texto en negrita */
+    color: #2c3e50; /* Color del nombre de usuario */
 }
 
 .comment .time {
-    font-size: 12px; /* Texto pequeño para el tiempo */
-    color: #7f8c8d; /* Color gris claro */
+    font-size: 12px; /* Tamaño de fuente para la fecha */
+    color: #7f8c8d; /* Color gris para la fecha */
 }
 
 .comment .text {
-    margin: 10px 0; /* Espaciado arriba y abajo del texto */
-    font-size: 15px; /* Tamaño de fuente */
+    margin: 10px 0; /* Espacio vertical entre elementos */
+    font-size: 15px; /* Tamaño de fuente del texto del comentario */
 }
 
-/* Código insertado dentro de comentarios */
 .code-block {
-    background-color: rgb(202, 202, 202); /* Fondo gris claro */
+    background-color: rgb(202, 202, 202); /* Fondo gris claro para el bloque de código */
     padding: 10px; /* Espaciado interno */
     border-radius: 5px; /* Bordes redondeados */
-    color: #b416fd; /* Texto en color púrpura */
-    font-family: monospace; /* Fuente monoespaciada para representar código */
-    font-size: 14px; /* Tamaño de fuente */
-    margin-top: 10px; /* Espaciado superior */
+    color: #b416fd; /* Color del texto del código */
+    font-family: monospace; /* Fuente monoespaciada para el código */
+    font-size: 14px; /* Tamaño de fuente del código */
+    margin-top: 10px; /* Espacio superior */
 }
 
-/* Estilos para los likes */
 .likes {
-    margin-top: 10px; /* Espaciado superior */
-    color: #6656f7; /* Color púrpura */
-    font-size: 14px; /* Tamaño de fuente */
+    margin-top: 10px; /* Espacio superior */
+    color: #4253ee; /* Color de las reacciones */
+    font-size: 14px; /* Tamaño de fuente de las reacciones */
+}
+
+/* Media Queries para pantallas más pequeñas */
+
+@media (max-width: 1200px) {
+    .main-content {
+        flex-direction: column; /* Apilar en pantallas más pequeñas */
+        align-items: center; /* Alinear los elementos en el centro */
+    }
+
+    .video-section {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .video-section iframe {
+        height: 300px; /* Ajustar la altura para pantallas más pequeñas */
+    }
+
+    .video-info h3 {
+        font-size: 20px;
+    }
+
+    .video-info p, .brief-review {
+        font-size: 14px;
+    }
+
+    .comment-input button {
+        font-size: 14px;
+    }
+
+    .comment {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .video-section iframe {
+        height: 200px; /* Más pequeño para móviles */
+    }
+
+    .video-info h3 {
+        font-size: 18px;
+    }
+
+    .video-info p, .brief-review {
+        font-size: 12px;
+    }
+
+    .comment-input button {
+        font-size: 12px;
+    }
+
+    .comment {
+        font-size: 12px;
+    }
 }

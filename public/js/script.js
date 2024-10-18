@@ -1,18 +1,22 @@
 document.getElementById('registerForm').addEventListener('submit', async function (e) {
-    e.preventDefault(); // Evita que el formulario se envíe de forma predeterminada, asi dice gpt
+    e.preventDefault(); // Evita que el formulario se envíe de forma predeterminada
 
     const firstName = document.getElementById('firstName').value;
     const lastName = document.getElementById('lastName').value;
-    const email = document.getElementById('email').value;
+    const phone = document.getElementById('phone').value;
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
+    const dateOfBirth = document.getElementById('date').value;
+    const address = document.getElementById('text').value;
 
-    // Verifica si ta todo correcto
-    console.log('Username:', username);
-    console.log('Password:', password);
-    console.log('FirstName:', firstName);
-    console.log('LastName:', lastName);
-    console.log('email:', email);
+    // Verifica si todos los datos están correctos
+    console.log('Nombre:', firstName);
+    console.log('Apellido:', lastName);
+    console.log('Teléfono:', phone);
+    console.log('Nombre de usuario:', username);
+    console.log('Contraseña:', password);
+    console.log('Fecha de nacimiento:', dateOfBirth);
+    console.log('Dirección:', address);
 
     try {
         const response = await fetch('/api/users/register', {
@@ -20,19 +24,28 @@ document.getElementById('registerForm').addEventListener('submit', async functio
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({ username, password, firstName, lastName, email }),
+            body: JSON.stringify({ 
+                username, 
+                password, 
+                firstName, 
+                lastName, 
+                phone,
+                dateOfBirth,
+                address
+            }),
         });
 
         const data = await response.json();
         console.log('Respuesta del servidor:', data);
 
         if (data.message) {
-            alert(data.message); // Muestra un mensaje de éxito o errorrrr al userrr
+            alert(data.message); // Muestra un mensaje de éxito o error al usuario
         }
     } catch (error) {
         console.error('Error en la solicitud:', error);
     }
 });
+
 
 
 document.getElementById('loginForm').addEventListener('submit', async function (e) {

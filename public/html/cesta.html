@@ -1,93 +1,175 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cesta de Compras</title>
+    <title>Cesta</title>
     <link rel="stylesheet" href="../css/stylesCesta.css">
+    <link rel="stylesheet" href="../css/style-principal.css">
+    <style>
+        /* Incluye tus estilos aquí (los que ya tienes en tu diseño) */
+    </style>
 </head>
-<body>
-    <div class="container">
-        <h1>Cesta</h1>
-        <div class="cart">
-            <div class="subtitulo-1">
-            <h3>2 cursos en la cesta</h3>
-            </div>
-            <div class="course">
-                <div class="imagen">
-                    <figure>
-                        <img src="../images/Desarrollo_web.jpeg" alt="desarrollo web">
-                    </figure>
-                </div>
-                <div class="course-details-1">
-                    <h4>Desarrollo Web Completo con HTML5, CSS3, JS AJAX PHP y MySQL</h4>
-                    <p>Por Cerna Moreno Jhony Alexis</p>
-                    <p class="best-seller">Lo más vendido</p>
-                    <p>4.7 ★ (55,920 valoraciones)</p>
-                    <p>83 horas en total - 794 clases - Principiante</p>
-                </div>
-                <div class="course-price">
-                    <p>49,90 S/</p>
-                    <button>Eliminar</button>
-                </div>
-            </div>
 
-            <div class="course">
-                <div class="imagen">
-                    <div class="figure">
-                        <img src="../images/TypeScrip.jpeg" alt="TypeScrip">
+<body>
+    <header>
+        <div class="container-hero">
+            <div class="container hero">
+                <div class="customer-support">
+                    <i class="fa-solid fa-headset"></i>
+                    <div class="content-customer-support">
+                        <span class="text">Soporte al cliente</span>
+                        <span class="number">+51 921 297 778</span>
                     </div>
                 </div>
-                <div class="course-details-2">
-                    <h4>Aprende Typescript de 0 a 100</h4>
-                    <p>Por Naito Perez Juan Carlos y Medina Aguirre Ana</p>
-                    <p>4.4 ★ (1606 valoraciones)</p>
-                    <p>3.5 horas en total - 34 clases - Intermedio</p>
+
+                <div class="container-logo">
+                    <i class="fa-solid fa-robot"></i>
+                    <h1 class="logo"><a href="/">GUIMARBOT</a></h1>
                 </div>
-                <div class="course-price">
-                    <p>59,90 S/</p>
-                    <button>Eliminar</button>
+
+                <div class="container-user">
+                    <i class="fa-solid fa-user"></i>
+                    <i class="fa-solid fa-basket-shopping" id="cart-icon"></i>
+                    <div class="content-shopping-cart">
+                        <span class="text">Carrito</span>
+                        <span class="number" id="cart-count">(0)</span>
+                        <div class="cart-popup" id="cart-popup"></div> <!-- Contenedor para el popup -->
+                    </div>
                 </div>
             </div>
         </div>
 
-        <div class="total-section">
-            <h3>Total: 109,80 S/</h3>
-            <p class="discount">62 % de descuento</p>
-            <a href="pago.html">
-                <button class="pay-button">Pagar</button>
+        <div class="container-navbar">
+            <nav class="navbar container">
+                <i class="fa-solid fa-bars"></i>
+                <ul class="menu">
+                    <li><a href="principal.html">Inicio</a></li>
+                    <li><a href="cursos.html">Cursos</a></li>
+                    <li><a href="#">Precio</a></li>
+                    <li><a href="#">Contáctanos</a></li>
+                    <li><a href="beca.html">Postula a una beca</a></li>
+                    <li><a href="index.html">Cerrar Sesión</a></li>
+                </ul>
+
+                <form class="search-form">
+                    <input type="search" placeholder="Buscar..." />
+                    <button class="btn-search">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </form>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+    <div class="cart-container">
+        <!-- Cursos en la cesta -->
+        <div class="cart-items">
+            <h2 id="cart-count">Cesta</h2> <!-- AQUI EL CONTADOR PERO TODAVÍA NO -->
+
+            <div id="cart-content">
+                <!-- Aquí se llenarán los cursos del carrito -->
+            </div>
+        </div>
+
+        <!-- Resumen del carrito -->
+        <div class="cart-summary">
+            <h3>Resumen</h3>
+            <p>Total: <span class="total" id="cart-total">0 S/</span></p>
+            <a href="../html/pagos.html">
+                <button>Pagar</button>
             </a>
 
-            <div class="promotions">
-                <h4>Promociones</h4>
-                <input type="text" placeholder="Introduce el cupón">
-                <button>Aplicar</button>
-            </div>
-        </div>
-
-        <div class="recommendations">
-            <div class="subtitulo-2">
-            <h3>También podría gustarte</h3>
-            </div>
-            <div class="recommended-course">
-                <img src="../images/javaScript.jpeg" alt="Curso JavaScript Moderno">
-                <h4>JavaScript Moderno Guía Definitiva</h4>
-                <p>49,90 S/</p>
-            </div>
-
-            <div class="recommended-course">
-                <img src="../images/react.jpeg" alt="Curso React y Firebase">
-                <h4>Aprende React + Firebase</h4>
-                <p>59,90 S/</p>
-            </div>
-
-            <div class="recommended-course">
-                <img src="../images/java.jpeg" alt="Curso Java">
-                <h4>Java TOTAL - Programador Avanzado</h4>
-                <p>49,90 S/</p>
+            <div class="promo-code">
+                <input type="text" placeholder="Introducir el cupón">
+                <button class="promo-apply">Aplicar</button>
             </div>
         </div>
     </div>
-</body>
-</html>
+</main>
 
+    <footer class="footer">
+        <div class="container container-footer">
+            <div class="menu-footer">
+                <div class="contact-info">
+                    <p class="title-footer">Información de Contacto</p>
+                    <ul>
+                        <li>
+                            Linkedin: https://www.linkedin.com/in/jorge-luis-córdova-lopez-0122b9133/
+                        </li>
+                        <li>Teléfono: +51 921 297 778</li>
+                        <li>GmaiL: jlcordoval@ucvvirtual.edu.pe</li>
+                    </ul>
+                    <div class="social-icons">
+                        <span class="facebook">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </span>
+                        <span class="twitter">
+                            <i class="fa-brands fa-twitter"></i>
+                        </span>
+                        <span class="youtube">
+                            <i class="fa-brands fa-youtube"></i>
+                        </span>
+                        <span class="pinterest">
+                            <i class="fa-brands fa-pinterest-p"></i>
+                        </span>
+                        <span class="instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="information">
+                    <p class="title-footer">Información</p>
+                    <ul>
+                        <li><a href="#">Acerca de Nosotros</a></li>
+                        <li><a href="#">Información Suscripción</a></li>
+                        <li><a href="#">Politicas de Privacidad</a></li>
+                        <li><a href="#">Términos y condiciones</a></li>
+                        <li><a href="#">Contactános</a></li>
+                    </ul>
+                </div>
+
+                <div class="my-account">
+                    <p class="title-footer">Mi cuenta</p>
+
+                    <ul>
+                        <li><a href="#">Mi cuenta</a></li>
+                        <li><a href="#">Historial de cursos</a></li>
+                        <li><a href="#">Lista de deseos</a></li>
+                        <li><a href="#">Boletín</a></li>
+                        <li><a href="#">Suscripciones</a></li>
+                    </ul>
+                </div>
+
+                <div class="newsletter">
+                    <p class="title-footer">Boletín informativo</p>
+
+                    <div class="content">
+                        <p>
+                            Suscríbete a nuestros boletines ahora y mantente al día con
+                            nuevos cursos y ofertas exclusivas.
+                        </p>
+                        <input type="email" placeholder="Ingresa el correo aquí...">
+                        <button>Suscríbete</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <p>
+                    Guimarbot. Todos los derechos reservados &copy; 2024
+                </p>
+
+                <img src="../images/payment.png" alt="Pagos">
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/81581fb069.js" crossorigin="anonymous"></script>
+    <script src="../js/script-cesta.js"></script>
+</body>
+
+</html>

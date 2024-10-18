@@ -28,7 +28,86 @@
 					</div>
 
 					<div class="container-user">
-						<i class="fa-solid fa-user"></i>
+						<!-- Racha -->
+						<div class="streak-container">
+							<button class="streak-trigger" type="button" aria-haspopup="dialog" aria-expanded="false"
+								aria-controls="streak-dialog" aria-label="Ver racha">
+								<div class="streak-content">
+									<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="none" viewBox="0 0 60 60">
+										<path fill="#D5AB00" fill-rule="evenodd"
+											d="M14.647 53.33a7.013 7.013 0 1 0-7.978-7.977L5.636 52.23a1.875 1.875 0 0 0 2.133 2.133z"
+											clip-rule="evenodd"></path>
+										<circle cx="49.975" cy="45" r="1.875" fill="#0AE98A"></circle>
+										<circle cx="22.5" cy="10" r="1.875" fill="#0AE98A"></circle>
+										<circle cx="5" cy="35" r="1.875" fill="#0AE98A"></circle>
+										<path fill="#0AE98A" fill-rule="evenodd"
+											d="M42.745 30.309A26.02 26.02 0 0 0 52.51 9.992a2.5 2.5 0 0 0-2.501-2.502 26 26 0 0 0-1.427.04 26.02 26.02 0 0 0-18.89 9.725L18.894 30.753a2.5 2.5 0 0 0 .163 3.31l.021.02 6.838 6.84q.128.125.267.23l.01.008c.898.67 2.156.665 3.054-.054zM25.972 43.853l1.338 4.012a4.376 4.376 0 0 0 6.108 2.53l6.043-3.02a4.38 4.38 0 0 0 2.419-3.914v-9.258l-11.071 8.856a5 5 0 0 1-4.837.794m-9.03-14.662a5 5 0 0 0-.795 4.837l-4.012-1.337a4.376 4.376 0 0 1-2.53-6.109l3.02-6.042a4.38 4.38 0 0 1 3.915-2.42h9.258zM40 23.75a3.75 3.75 0 1 0 0-7.5 3.75 3.75 0 0 0 0 7.5"
+											clip-rule="evenodd"></path>
+									</svg>
+									<span class="streak-counter">5</span>
+								</div>
+							</button>
+							<div class="streak-popup" id="streak-dialog" role="dialog" aria-labelledby="streak-title" aria-modal="true">
+								<div class="streak-popup-content">
+									<svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" fill="none" viewBox="0 0 60 60">
+										<path fill="#D5AB00" fill-rule="evenodd"
+											d="M14.647 53.33a7.013 7.013 0 1 0-7.978-7.977L5.636 52.23a1.875 1.875 0 0 0 2.133 2.133z"
+											clip-rule="evenodd"></path>
+										<circle cx="49.975" cy="45" r="1.875" fill="#0AE98A"></circle>
+										<circle cx="22.5" cy="10" r="1.875" fill="#0AE98A"></circle>
+										<circle cx="5" cy="35" r="1.875" fill="#0AE98A"></circle>
+										<path fill="#0AE98A" fill-rule="evenodd"
+											d="M42.745 30.309A26.02 26.02 0 0 0 52.51 9.992a2.5 2.5 0 0 0-2.501-2.502 26 26 0 0 0-1.427.04 26.02 26.02 0 0 0-18.89 9.725L18.894 30.753a2.5 2.5 0 0 0 .163 3.31l.021.02 6.838 6.84q.128.125.267.23l.01.008c.898.67 2.156.665 3.054-.054zM25.972 43.853l1.338 4.012a4.376 4.376 0 0 0 6.108 2.53l6.043-3.02a4.38 4.38 0 0 0 2.419-3.914v-9.258l-11.071 8.856a5 5 0 0 1-4.837.794m-9.03-14.662a5 5 0 0 0-.795 4.837l-4.012-1.337a4.376 4.376 0 0 1-2.53-6.109l3.02-6.042a4.38 4.38 0 0 1 3.915-2.42h9.258zM40 23.75a3.75 3.75 0 1 0 0-7.5 3.75 3.75 0 0 0 0 7.5"
+											clip-rule="evenodd"></path>
+									</svg>
+									<h3 id="streak-title">Racha semanal</h3>
+									<p>¡Llevas 11 semanas en racha! Regresa la próxima semana para mantenerla.</p>
+									<div class="weeks">
+										<span class="week-label">Semanas:</span>
+										<span class="week completed">3</span>
+										<span class="week completed">4</span>
+										<span class="week completed">5</span>
+										<span class="week">6</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Ícono de usuario -->
+						<i class="fa-solid fa-user" id="user-icon"></i>
+						
+						<!-- Popup del usuario -->
+						<div class="user-popup" id="user-popup">
+							<div class="user-menu">
+								<div class="user-submenu" id="user-submenu">
+									<div class="triangle"></div>
+									<div class="user-box">
+										<div class="username">
+											<div class="username-content">
+												<div class="username-title">
+													<span>Hola Jorge Luis</span>
+													<span class="plan">Tienes 50 días de tu plan</span>
+												</div>
+												<div class="profile">
+													<a href="../html/perfil-user.html"><span>Ver mi perfil</span></a>
+												</div>
+											</div>
+										</div>
+										<hr> 
+										<div class="logged-menu-content">
+											<ul>
+												<li><a href="PARA REFERIDOS">Obtén 1 mes gratis</a></li>
+												<li><a href="MI SUSCRIPCION">Mi suscripción</a></li>
+												<li><a href="CONTACTANOS">Contáctanos</a></li>
+											</ul>
+										</div>
+										<div class="logout">
+											<a href="../html/index.html">Cerrar sesión</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
 						<i class="fa-solid fa-basket-shopping"></i>
 						<div class="content-shopping-cart">
 							<span class="text">Carrito</span>
@@ -42,13 +121,12 @@
 				<nav class="navbar container">
 					<i class="fa-solid fa-bars"></i>
 					<ul class="menu">
-						<li><a href="principal.html">Inicio</a></li>
+						<li><a href="index.html">Iniciar Sesión</a></li>
 						<li><a href="cursos.html">Cursos</a></li>
 						<li><a href="#">Precio</a></li>
 						<li><a href="#">Contáctanos</a></li>
 						<li><a href="beca.html">Postula a una beca</a></li>
 						<li><a href="index.html">Cerrar Sesión</a></li>
-						<li><a href="dash.html">Dashboard</a></li>
 					</ul>
 
 					<form class="search-form">
@@ -503,6 +581,63 @@
 					</div>
 				</div>
 			</section>
+
+			<section class="container plans">
+				<h1 class="heading-1">Elige tu plan</h1>
+			
+				<div class="container-plans">
+					<!-- Plan Básico -->
+					<div class="card-plan">
+						<h3>Básico</h3>
+						<p>Este plan está diseñado para una persona y ofrece acceso a todos los beneficios de la plataforma.</p>
+						<ul>
+							<li>Acceso a todos los cursos</li>
+							<li>Soporte técnico</li>
+							<li>Acceso a la comunidad de estudiantes</li>
+							<li>Certificaciones al finalizar los cursos</li>
+						</ul>
+						<div class="plan-pricing">
+							<span class="price">S/200</span>
+							<span>/Año</span>
+						</div>
+						<div class="plan-action">Elegir Plan</div>
+					</div>
+			
+					<!-- Plan Avanzado (Duo) -->
+					<div class="card-plan">
+						<h3>Avanzado (Duo)</h3>
+						<p>Este plan es ideal para dos personas, ofreciendo acceso compartido a todos los beneficios de la plataforma.</p>
+						<ul>
+							<li>Acceso a todos los cursos</li>
+							<li>Soporte técnico</li>
+							<li>Acceso a la comunidad de estudiantes</li>
+							<li>Certificaciones al finalizar los cursos</li>
+						</ul>
+						<div class="plan-pricing">
+							<span class="price">S/350</span>
+							<span>/Año</span>
+						</div>
+						<div class="plan-action">Elegir Plan</div>
+					</div>
+			
+					<!-- Plan Expert Grupo -->
+					<div class="card-plan">
+						<h3>Expert Grupo</h3>
+						<p>Este plan es perfecto para grupos de hasta tres personas, con acceso total a todos los beneficios de la plataforma.</p>
+						<ul>
+							<li>Acceso a todos los cursos</li>
+							<li>Soporte técnico</li>
+							<li>Acceso a la comunidad de estudiantes</li>
+							<li>Certificaciones al finalizar los cursos</li>
+						</ul>
+						<div class="plan-pricing">
+							<span class="price">S/500</span>
+							<span>/Año</span>
+						</div>
+						<div class="plan-action">Elegir Plan</div>
+					</div>
+				</div>
+			</section>
 		</main>
 
 		<footer class="footer">
@@ -583,9 +718,7 @@
 			</div>
 		</footer>
 
-		<script
-			src="https://kit.fontawesome.com/81581fb069.js"
-			crossorigin="anonymous"
-		></script>
+		<script src="https://kit.fontawesome.com/81581fb069.js" crossorigin="anonymous"></script>
+		<script src="../js/script-principal.js"></script>
 	</body>
 </html>
